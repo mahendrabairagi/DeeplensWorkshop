@@ -123,3 +123,37 @@ Instead, if you are presented with the below screen, type the device password as
 ### Step 7- Select Finish
 
 Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Completed under Registration status.
+
+## Deploy Face Recognition project
+
+### Step 1- Create Project
+
+The console should open on the Projects screen, select Create new project on the top right (if you don’t see the project list view, click on the hamburger menu on the left and select Projects)
+
+Choose, Use a **project template** as the Project type, and select **Face Detection** from the project templates list.
+
+Scroll down the screen and select **Next**
+
+Change the Project name as Face-detection-your-name
+
+Scroll down the screen and select **Create**
+
+### Step 2- Deploy to device
+In this step, you will deploy the Face detection project to your AWS DeepLens device.
+
+Select the project you just created from the list by choosing the radio button
+
+Select Deploy to device.
+
+On the Target device screen, choose your device from the list, and select **Review.**
+
+Select Deploy.
+
+On the AWS DeepLens console, you can track the progress of the deployment. It can take a few minutes to transfer a large model file to the device. Once the project is downloaded, you will see a success message displayed and the banner color will change from blue to green.
+
+To view the output, open a terminal (on the desktop, choose the top left button and search for terminal) and enter the following command:
+
+`mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg`
+
+
+
