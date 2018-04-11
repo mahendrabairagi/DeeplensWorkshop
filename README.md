@@ -19,12 +19,12 @@ Enter a name for your DeepLens device (for example, “MyDevice”), and select 
 AWS DeepLens projects require different levels of permissions, which are set by AWS Identity and Access Management (IAM) roles. When registering your device for the first time, you'll need to create each one of these IAM roles.
 
 <details> <summary> IAM role for AWS DeepLens </summary>
-<p>
+
 select Create a role in IAM.
 Use case is selected by default. Click Next:Permissions
 Click Next:Review
 Click Create role 
-</p>  
+
 </details>
 
 <details> <summary> IAM role for AWS Greengrass </summary>
