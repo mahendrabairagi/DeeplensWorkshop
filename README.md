@@ -20,10 +20,10 @@ AWS DeepLens projects require different levels of permissions, which are set by 
 
 <details> <summary> IAM role for AWS DeepLens </summary>
 
-select Create a role in IAM.
-Use case is selected by default. Click Next:Permissions
-Click Next:Review
-Click Create role 
+  select Create a role in IAM.
+  Use case is selected by default. Click Next:Permissions
+  Click Next:Review
+  Click Create role 
 
 </details>
 
