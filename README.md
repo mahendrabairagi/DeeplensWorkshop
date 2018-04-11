@@ -4,11 +4,11 @@ In this workshop you will learn how to register and configure your DeepLens and 
 
 The workshop consists of 2 hands-on lab sessions:
 
-Hands-on Lab 1: Build and train a face detection model in SageMaker
+### Hands-on Lab 1: Build and train a face detection model in SageMaker
 
 In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab](https://github.com/fibbonnaci/DeepLens-workshops/tree/master/SageMaker%20lab)
 
-Hands-on Lab 2: Register your DeepLens and deploy to device.
+### Hands-on Lab 2: Register your DeepLens and deploy to device.
 
 The instructions for this hands-on lab is provided below.
 
