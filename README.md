@@ -28,7 +28,7 @@ Click Next:Review
 
 Click Create role 
 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensServiceRole.
+Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensServiceRole.**
 
 ### Role 2- IAM role for AWS Greengrass 
 
@@ -40,7 +40,7 @@ Click Next:Review
 
 Click Create role 
 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensGreengrassRole.
+Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensGreengrassRole.**
 
 ### Role 3- IAM group role for AWS Greengrass
 
@@ -48,7 +48,7 @@ Select Create a role in IAM.
 Use case is selected by default. Click Next:Permissions
 Click Next:Review
 Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensGreengrassGroupRole.
+Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensGreengrassGroupRole.**
 
 ### Role 4- IAM role for Amazon SageMaker
 
@@ -56,7 +56,7 @@ Select Create a role in IAM.
 Use case is selected by default. Click Next:Permissions
 Click Next:Review
 Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensSageMakerRole.
+Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensSageMakerRole.**
 
 ### Role 5- IAM role for AWS Lambda
 
@@ -64,11 +64,11 @@ Select Create a role in IAM.
 Use case is selected by default. Click Next:Permissions
 Click Next:Review
 Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensLambdaRole.
+Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensLambdaRole.**
 
 Note: These roles are very important. Make sure that you select the right role for each one, as you can see in the screenshot.
 
-Once you have all the roles correctly created and populated, select Next.
+Once you have all the roles correctly created and populated, select **Next.**
 
 ### Step 3- Download certificate
 In this step, you will download and save the required certificate to your computer. You will use it later to enable your DeepLens to connect to AWS.
@@ -76,4 +76,17 @@ In this step, you will download and save the required certificate to your comput
 Select Download certificate and note the location of the certificates.zip file. Select Register.
 
 Note: Do not open the zip file. You will attach this zip file later on during device registration.
+
+## Configure your DeepLens
+
+In this step, you will connect the device to a Wi-Fi/Ethernet connection, upload the certificate and review your set-up. Then you're all set!
+
+Power ON your device
+
+<details> <summary>If you are connected over monitor setup </summary>
+  
+  Make sure the middle LED is blinking. If it is not, then use a pin to reset the device. The reset button is located at the back of the device
+  
+  Nvigate to the setup page at **192.168.0.1.**
+  
 
