@@ -87,6 +87,39 @@ Power ON your device
   
   Make sure the middle LED is blinking. If it is not, then use a pin to reset the device. The reset button is located at the back of the device
   
-  Nvigate to the setup page at **192.168.0.1.**
+  Navigate to the setup page at **192.168.0.1.**
   
+</details>
+  
+<details> <summary>If you are connected in headless mode </summary>
+  
+  Make sure the middle LED is blinking. If it is not, then use a pin to reset the device. The reset button is located at the back of the device
+  
+  Locate the SSID/password of the device’s Wi-Fi. You can find the SSID/password on the underside of the device.
+  
+  Connect to the device network via the SSID and provide the password
+  
+  Navigate to the setup page at **192.168.0.1.**
+</details>
 
+### Step 4- Connect to your network
+
+Select your local Wi-Fi network ID from the dropdown list and enter your WiFi password. If you are using ethernet, choose Use Ethernet option instead.
+
+Select Next.
+
+### Step 5- Attach Certificates
+
+Select Browse in the Certificate section. Select the zip file you downloaded in Step 4 
+
+Select Next.
+
+### Step 6- Device set up.
+
+If you are on the device summary page- Please do not make changes to the password.
+
+Instead, if you are presented with the below screen, type the device password as Aws2017! . 
+
+### Step 7- Select Finish
+
+Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Completed under Registration status.
