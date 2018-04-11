@@ -1,5 +1,11 @@
 In this lab session, you will learn how to build and train a model in Amazon SageMaker
 
+Before we begin, download the repo to your local directory. You can download the repo from [root directory](https://github.com/fibbonnaci/DeepLens-workshops)
+
+Click **Clone or download** button on the right. 
+
+This will download the repo as a zip file. Extract the zip file. 
+
 ### Step 1- Create notebook instance
 
 Go to SageMaker console: https://console.aws.amazon.com/sagemaker
@@ -35,21 +41,24 @@ You can view all your notebook instances by choosing Notebook on the left menu. 
 
 ![instances](https://user-images.githubusercontent.com/11222214/38314549-541e9140-37db-11e8-89eb-ec9be1677271.JPG)
 
-### Step 4- Open notebook
+### Step 4- Upload and Open notebook
 
-You can choose your notebook and click on 'Open'. 
+Choose Upload button on the jupyter page
+
+Find the SSD_Object_Detection_SageMaker_v3.ipynb file (You can find it in the sagemaker lab directory of the extracted repo. You downloaded and extracted the zip file earlier in the process)
+
+Choose Upload
+
+You can choose your uploaded notebook and click on 'Open'. 
 
 This will open your Jupyter notebook.
 
 ![jupyter](https://user-images.githubusercontent.com/11222214/38314946-427aa6e4-37dc-11e8-91bf-658ebe7b2a7b.JPG)
 
-### Step 5- Upload notebook
+### Step 5- Execute notebook
 
-1. Download the SSD_Object_Detection_SageMaker_v3.ipynb from the github repo
-
-2. Upload the notebook by choosing upload and uploading the file that you just downloaded
-
-3. Click on the uploaded file and execute the cells by clicking on run button or using shift+ enter on your keyboard
+1. Execute the cells by clicking on run button or using shift+ enter on your keyboard
 
 ![run](https://user-images.githubusercontent.com/11222214/38316244-21a07194-37df-11e8-9821-21d5d6e57976.JPG)
+
 
