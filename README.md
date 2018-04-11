@@ -21,17 +21,25 @@ AWS DeepLens projects require different levels of permissions, which are set by 
 ### Role 1- IAM role for AWS DeepLens
 
 Select Create a role in IAM.
+
 Use case is selected by default. Click Next:Permissions
+
 Click Next:Review
+
 Click Create role 
+
 Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensServiceRole.
 
 ### Role 2- IAM role for AWS Greengrass 
 
 Select Create a role in IAM.
+
 Use case is selected by default. Click Next:Permissions
+
 Click Next:Review
+
 Click Create role 
+
 Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name ## AWSDeepLensGreengrassRole.
 
 ### Role 3- IAM group role for AWS Greengrass
