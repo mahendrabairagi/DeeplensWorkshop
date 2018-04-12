@@ -4,6 +4,8 @@ Before we begin, download the repo to your local directory. You can download the
 
 Click **Clone or download** button on the right. 
 
+![github clone](https://user-images.githubusercontent.com/11222214/38658177-d73f77d0-3dd8-11e8-99ee-9d8a151cd6bd.jpg)
+
 This will download the repo as a zip file. Extract the zip file. 
 
 ### Step 1- Create notebook instance
