@@ -12,15 +12,13 @@ cloudwatch = boto3.client('cloudwatch')
 
 # --------------- Helper Function to call CloudWatch APIs ------------------
 
-def push_to_cloudwatch(name, value, timestamp):
+def push_to_cloudwatch(name, value):
     try:
-        metric_timestamp = datetime.datetime.fromtimestamp(timestamp)
         response = cloudwatch.put_metric_data(
             Namespace='string',
             MetricData=[
                 {
                     'MetricName': name,
-                    'Timestamp': metric_timestamp,
                     'Value': value,
                     'Unit': 'Percent'
                 },
@@ -45,7 +43,6 @@ def detect_faces(bucket, key):
         return response
 
     push = False
-    timestamp = float(key.split('_')[2].split('/')[1])
     dynamo_obj = {}
     dynamo_obj['s3key'] = key
 
@@ -54,7 +51,7 @@ def detect_faces(bucket, key):
         if int(item['Confidence']) > 10:
             push = True
             dynamo_obj[item['Type']] = str(round(item["Confidence"], 2))
-            push_to_cloudwatch(item['Type'], round(item["Confidence"], 2), timestamp)
+            push_to_cloudwatch(item['Type'], round(item["Confidence"], 2))
 
     if push:  # Push only if at least on emotion was found
         table = boto3.resource('dynamodb').Table('rekognize-faces')
