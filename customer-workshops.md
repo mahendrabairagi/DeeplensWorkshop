@@ -357,7 +357,7 @@ Next, set “Auto-refresh” to the smallest interval possible (1h), and change 
 NOTE: These metrics will only appear once they have been sent to Cloudwatch via the Rekognition Lambda. It may take some time for them to appear after your model is deployed and running locally. If they do not appear, then there is a problem somewhere in the pipeline.
 
 
-With this we have come to the end of the session. As part of building this project, you learnt the following:
+### With this we have come to the end of the session. As part of building this project, you learnt the following:
 
 1.	How to build and train a face detection model in SageMaker
 2.	Modify the DeepLens inference lambda function to upload cropped faces to S3
