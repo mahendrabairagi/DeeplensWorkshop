@@ -17,11 +17,11 @@ In this project you will learn to build a deep learning model to identify and an
 
 The workshop consists of 4 hands-on lab sessions:
 
-### Hands-on Lab 1: Build and train a face detection model in SageMaker
+# Hands-on Lab 1: Build and train a face detection model in SageMaker
 
 In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab](https://github.com/fibbonnaci/DeepLens-workshops/tree/master/SageMaker%20lab)
 
-### Hands-on Lab 2: Register and configure your DeepLens device
+# Hands-on Lab 2: Register and configure your DeepLens device
 
 ## Register AWS DeepLens
 
@@ -172,7 +172,7 @@ Note: Instead, if you are presented with the below screen, type the device passw
 
 Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Completed under Registration status.
 
-### Hands-on Lab 3: Build a project to detect faces and send the cropped faces to S3 bucket
+# Hands-on Lab 3: Build a project to detect faces and send the cropped faces to S3 bucket
 
 #### IAM Roles:
 
@@ -180,7 +180,7 @@ First, we need to add S3 permissions to the DeepLens Lambda role so the lambda o
 
 Go to [IAM Console](https://console.aws.amazon.com/iam/home?region=us-east-1#/home)
 
-Choose Roles and look up AWSGreenGrassGroupRole
+Choose Roles and look up AWSDeepLensGreenGrassGroupRole
 
 Click on the role, and click Attach Policy
 
@@ -272,7 +272,7 @@ On the AWS DeepLens console, you can track the progress of the deployment. It ca
 You will find your cropped faces uplaod to your S3 bucket.
 
 
-### Hands-on Lab 4: Identify emotions
+# Hands-on Lab 4: Identify emotions
 
 **Step 1- Create DynamoDB table**
 
@@ -327,6 +327,11 @@ Existing role: rekognizeEmotions
 Choose Create function
 
 Replace the default script with the script in [recognize-emotions.py](https://github.com/fibbonnaci/DeepLens-workshops/blob/master/Integrate%20with%20Rekognition/rekognize-emotions.py). You can select the script by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
+
+Make sure you enter the table name you created earlier in the section highlighted below:
+
+![dynamodb](https://user-images.githubusercontent.com/11222214/38838790-b8b72116-418c-11e8-9a77-9444fc03bba6.JPG)
+
 
 Next, we need to add the event that triggers this lambda function. This will be an “S3:ObjectCreated” event that happens every time a face is uploaded to the face S3 bucket. Add S3 trigger from designer section on the left. 
 
