@@ -10,7 +10,7 @@ In this lab, you will build and train a face detection model. You can find the i
 
 ### Hands-on Lab 2: Register your DeepLens and deploy to device.
 
-The instructions for this hands-on lab is provided below.
+The instructions for this hands-on lab is here: [Registration and deployment](https://github.com/fibbonnaci/DeepLens-workshops/blob/master/Registration%20and%20project%20deployment/readme.md)
 
 ## Register AWS DeepLens
 
