@@ -225,8 +225,8 @@ except:
      # if exception is raised, that means it has failed
     message = sagemaker.describe_training_job(TrainingJobName=job_name)['FailureReason']
     print('Training failed with the following error: {}'.format(message))
-    
-    ```
+```
+
     
 To check the status, go to SageMaker dashboard and choose Jobs. Select the Job you have defined and scroll down to the details page on Job to “monitor” section. You will see a link to logs which will open CloudWatch.
 
@@ -394,7 +394,7 @@ greengrass_infinite_infer_run()
 def function_handler(event, context):
     return
  
- ```
+```
  
 To add the text file to your lambda function: In the Function code block, choose File. Then choose New File, add following code, then save file as caltech256_labels.txt
 
