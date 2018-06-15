@@ -64,7 +64,7 @@ We need to create an S3 bucket that we can upload faces to. These uploads will t
 
 3. Name your bucket and choose Next. In the next step, create bucket.
 
-<img src="images/picture5.png" width="600">
+<img src="images/picture5_2.png" width="600">
 
  
 
@@ -86,12 +86,12 @@ Step 3.1 - First, we'll create the greengrass Lambda (inference lambda function)
 
 1. Start by creating a function from the “greengrass-hello-world” blueprint:
 
- <img src="images/picture6.png" width="600">
+ <img src="images/picture5.png" width="600">
 
 
 2. Name the function “deeplens-dear-demo”, and attach the AWSDeepLensLambdaRole. Click ‘Create Function’
 
-<img src="images/picture7.png" width="600">
+<img src="images/picture6.png" width="600">
 
  
 
@@ -99,7 +99,7 @@ Step 3.1 - First, we'll create the greengrass Lambda (inference lambda function)
 
 3. Once created, we're going to replace the default handler code:
 
- <img src="images/picture8.png" width="600">
+ <img src="images/picture7.png" width="600">
 
 
 
@@ -107,13 +107,13 @@ Step 3.1 - First, we'll create the greengrass Lambda (inference lambda function)
 
 ·      <BUCKET_NAME>: the S3 bucket faces will be written to, which we created above
 
- <img src="images/picture9.png" width="600">
+ <img src="images/picture8.png" width="600">
 
  
 
 Once replaced:
 
-<img src="images/picture10.png" width="600">
+<img src="images/picture9.png" width="600">
 
  
 
@@ -128,20 +128,20 @@ Once replaced:
 1. Login to DeepLens Console – <https://console.aws.amazon.com/deeplens>
 2. Click on Create Project button
 
- <img src="images/picture11.png" width="600">
+ <img src="images/picture10.png" width="600">
 
 
 3. Select ‘Use a project template’  
 4. Select ‘Face Detection’ from sample project templates
 5. Select “Next” at bottom of screen
 
-<img src="images/picture12.png" width="600">
+<img src="images/picture11.png" width="600">
 
 6. Remove the pre-populated function by choosing Remove
 
-<img src="images/picture13.png" width="600">
+<img src="images/picture12.png" width="600">
 
-<img src="images/picture14.png" width="600">
+<img src="images/picture13.png" width="600">
 
 7. Choose ‘Add Function’ and choose the lambda function you just created above.
 8. Click ‘Create’
