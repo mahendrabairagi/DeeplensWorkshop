@@ -1,6 +1,4 @@
-## 
-
-#Create a DeepLens Inference Lambda function
+# Create a DeepLens Inference Lambda function
 
 ## In this module, you will learn to create an inference lambda function to be deployed to your DeepLens.
 
@@ -21,19 +19,19 @@ First, we need to add S3 permissions to the DeepLens Lambda role so the lambda o
 2. Go to console.aws.amazon.com and search for IAM
 3. Go to the “Roles” page on the IAM console. Look up the role “AWSDeepLensLambdaRole”
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.jpg)
+<img src="images/picture1.png" width="600">
 
  
 
 4. Click on the Role, Click Attach Policy, and attach “AmazonS3FullAccess”
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.jpg)
+<img src="images/picture2.png" width="600">
 
  
 
 5. Now we have to create a role for Rekognition Lambda. From “Create Role”, Select “AWS Service” and select “Lambda”:
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.jpg)
+<img src="images/picture3.png" width="600">
 
  
 
@@ -51,7 +49,7 @@ First, we need to add S3 permissions to the DeepLens Lambda role so the lambda o
 
 7. And create the role “rekognizeEmotion”:
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.jpg)
+<img src="images/picture4.png" width="600">
 
  
 
@@ -66,7 +64,7 @@ We need to create an S3 bucket that we can upload faces to. These uploads will t
 
 3. Name your bucket and choose Next. In the next step, create bucket.
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.jpg)
+<img src="images/picture5.png" width="600">
 
  
 
@@ -88,13 +86,12 @@ Step 3.1 - First, we'll create the greengrass Lambda (inference lambda function)
 
 1. Start by creating a function from the “greengrass-hello-world” blueprint:
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.jpg)
+ <img src="images/picture6.png" width="600">
 
- 
 
 2. Name the function “deeplens-dear-demo”, and attach the AWSDeepLensLambdaRole. Click ‘Create Function’
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.jpg)
+<img src="images/picture7.png" width="600">
 
  
 
@@ -102,27 +99,21 @@ Step 3.1 - First, we'll create the greengrass Lambda (inference lambda function)
 
 3. Once created, we're going to replace the default handler code:
 
- 
+ <img src="images/picture8.png" width="600">
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.jpg)
 
- 
-
- 
 
  with the inference script (you can find it in the github folder: **inference-lambda.py**), inserting real values for the following fields:
 
 ·      <BUCKET_NAME>: the S3 bucket faces will be written to, which we created above
 
- 
-
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.png)
+ <img src="images/picture9.png" width="600">
 
  
 
 Once replaced:
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.jpg)
+<img src="images/picture10.png" width="600">
 
  
 
@@ -137,34 +128,35 @@ Once replaced:
 1. Login to DeepLens Console – <https://console.aws.amazon.com/deeplens>
 2. Click on Create Project button
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png)
+ <img src="images/picture11.png" width="600">
 
- 
 
 3. Select ‘Use a project template’  
 4. Select ‘Face Detection’ from sample project templates
 5. Select “Next” at bottom of screen
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.png) 
+<img src="images/picture12.png" width="600">
 
 6. Remove the pre-populated function by choosing Remove
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image013.png)![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image014.png) 
+<img src="images/picture13.png" width="600">
+
+<img src="images/picture14.png" width="600">
 
 7. Choose ‘Add Function’ and choose the lambda function you just created above.
 8. Click ‘Create’
 9. Find your project in the list (the one you just created)
 10. Select the radio button and click Deploy
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image016.png)
+<img src="images/picture16.png" width="600">
 
 11. Choose your device and  Click ‘Review’ 
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image017.png)
+<img src="images/picture17.png" width="600">
 
 12. Click ‘Deploy’
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image019.png)
+<img src="images/picture19.png" width="600">
 
  
 
