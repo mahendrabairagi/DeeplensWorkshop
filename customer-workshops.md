@@ -1,6 +1,6 @@
 # DeepLens-workshops
 
-In this workshop you will learn how to build a sentiment analysis project for your DeepLens. This project was submitted by Ricardo Mota and Jidesh Veeramachaneni as part of the DeepLens Hackathon challenge.
+In this workshop you will learn how to build a sentiment analysis project for your DeepLens.
 
 In this project you will learn to build a deep learning model to identify and analyze the sentiments of your audience
 
