@@ -13,6 +13,7 @@ import cv2
 from threading import Thread
 import urllib
 import zipfile
+import mo
 
 #boto3 is not installed on device by default.
 
@@ -67,6 +68,7 @@ def push_to_s3(img, index):
                                                    timestamp, index)
 
         s3 = boto3.client('s3')
+      
 
         encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
         _, jpg_data = cv2.imencode('.jpg', img, encode_param)
@@ -83,10 +85,13 @@ def push_to_s3(img, index):
 
 def greengrass_infinite_infer_run():
     try:
-        modelPath = "/opt/awscam/artifacts/mxnet_deploy_ssd_FP16_FUSED.xml"
         modelType = "ssd"
+        model_name = "model"
         input_width = 300
         input_height = 300
+        modelPath = "/opt/awscam/artifacts/mxnet_deploy_ssd_FP16_FUSED.xml"
+        #error, modelPath = mo.optimize(model_name,input_width,input_height)
+
         prob_thresh = 0.25
         results_thread = FIFO_Thread()
         results_thread.start()
