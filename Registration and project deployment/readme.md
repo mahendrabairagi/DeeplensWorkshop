@@ -198,3 +198,12 @@ To view the output, open a terminal (on the desktop, choose the top left button 
 
 `mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg`
 
+
+if you are accessing Deeplens over SSH then use following command over SSH
+
+`ssh aws_cam@$ip_address cat /tmp/\*results.mjpeg |mplayer –demuxer lavf -cache 8092 -lavfdopts format=mjpeg:probesize=32 -`
+For streaming over SSH you may need to install mplayer on your laptop by
+`sudo apt-get install mplayer`
+  
+or visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
+
