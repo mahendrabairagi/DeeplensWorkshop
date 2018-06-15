@@ -17,12 +17,7 @@ In this project you will learn to build a deep learning model to identify and an
 
 The workshop consists of 4 hands-on lab sessions:
 
-# Hands-on Lab 1: Build and train a face detection model in SageMaker
-
-In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab]
-(https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
-
-# Hands-on Lab 2: Register and configure your DeepLens device
+# Hands-on Lab 1: Register and configure your DeepLens device (You can skip this lab if device registration is already complete)
 
 ## Register AWS DeepLens
 
@@ -173,6 +168,12 @@ Note: Instead, if you are presented with the below screen, type the device passw
 
 Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Completed under Registration status.
 
+
+# Hands-on Lab 2: Build and train a face detection model in SageMaker
+
+In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab]
+(https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
+
 # Hands-on Lab 3: Build a project to detect faces and send the cropped faces to S3 bucket
 
 #### IAM Roles:
@@ -240,7 +241,7 @@ Choose a blank template and scroll down the screen to select Next
 
 Provide a name for your project: face-detection-your-name
 
-Click on Add Models and choose face detection
+Click on Add Models and choose face_detection (One you created during SageMaker Lab)
 
 Click on Add function and choose the lambda function you just created: Deeplens-sentiment-your-name
 
