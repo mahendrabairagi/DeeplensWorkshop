@@ -14,7 +14,7 @@ Primary key: s3key
 
 Use default settings
 
-<img src="images/clip_image001.jpg" width="500">
+<img src="images/clip_image001.jpg" width="800">
 
 Click on Create. This will create a table in your DynamoDB.
 
