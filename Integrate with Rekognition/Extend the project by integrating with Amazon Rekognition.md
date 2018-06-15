@@ -1,4 +1,4 @@
-# Extend the project by integrating with Amazon Rekognition#
+# Extend the project by integrating with Amazon Rekognition
 
 In this module, you will learn how to integrate the project with Amazon Rekognition and view the output over CloudWatch. 
 
@@ -14,7 +14,7 @@ Primary key: s3key
 
 Use default settings
 
-![img](images/clip_image001.jpg)
+![img](images/clip_image001.jpg| width=300)
 
 Click on Create. This will create a table in your DynamoDB.
 
@@ -138,7 +138,7 @@ With this we have come to the end of the session. As part of building this proje
 
 **An overview of the architecture you built:**
 
-![img](images/clip_image009.png)
+![img](images/clip_image009.jpg)
 
  
 
