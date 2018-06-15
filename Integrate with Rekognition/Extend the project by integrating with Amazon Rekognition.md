@@ -1,3 +1,5 @@
+# In this module, you will learn how to extend your projects by integrating with Amazon Rekognition to recognize the emotions
+
 # Extend the project by integrating with Amazon Rekognition
 
 In this module, you will learn how to integrate the project with Amazon Rekognition and view the output over CloudWatch. 
