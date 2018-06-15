@@ -1,3 +1,0 @@
-In this module, you will learn to create an inference lambda function to be deployed to your DeepLens.
-
-The inference lambda function will crop the identified faces and upload them to your S3 bucket.
