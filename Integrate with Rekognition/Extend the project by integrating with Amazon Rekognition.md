@@ -14,7 +14,7 @@ Primary key: s3key
 
 Use default settings
 
-<img src="images/clip_image001.jpg" width="800">
+<img src="images/clip_image001.jpg" width="600">
 
 Click on Create. This will create a table in your DynamoDB.
 
@@ -33,7 +33,7 @@ To create the lambda function, follow the steps below:
 3. Name the function- recognize-emotion. Choose Python 2.7 as the run time
 4. For the role, select ‘choose an existing role’ aand choose the “rekognizeEmotion” role we created earlier
 
-![img](images/clip_image002.jpg)
+<img src="images/clip_image002.jpg" width="600">
 
  
 
@@ -51,9 +51,8 @@ The script does the following functions:
 
 Once the script is inserted, it should look like the below:
 
-![img](images/clip_image003.jpg)
+<img src="images/clip_image003.jpg" width="600">
 
- 
 
 6. Next, we need to add the event that triggers this lambda function. This will be an “S3:ObjectCreated” event that happens every time a face is uploaded to the face S3 bucket
 
@@ -62,10 +61,7 @@ Once the script is inserted, it should look like the below:
 Add the “S3” trigger:
 
  
-
-![img](images/clip_image004.jpg)
-
- 
+<img src="images/clip_image004.jpg" width="600">
 
 With the following configuration:
 
@@ -79,7 +75,7 @@ Filter- .jpg
 
 Enable trigger- ON (keep the checkbox on)
 
-![img](images/clip_image005.jpg)
+<img src="images/clip_image005.jpg" width="600">
 
  
 
@@ -104,8 +100,7 @@ To view the output of your project:
 3. Add Line Widget:
 
  
-
-![img](images/clip_image006.jpg)
+<img src="images/clip_image006.jpg" width="600">
 
  
 
@@ -113,13 +108,11 @@ To view the output of your project:
 
 **NOTE:** These metrics will only appear once they have been sent to Cloudwatch via the Rekognition Lambda. It may take some time for them to appear after your model is deployed and running locally. If they **do not** appear, then there is a problem somewhere in the pipeline.
 
-![img](images/clip_image007.jpg)
-
- 
+<img src="images/clip_image007.jpg" width="600">
 
 5. Next, set “Auto-refresh” to the smallest interval possible (1h), and change the “Period” to whatever works best for you (1 second or 5 seconds)
 
-![img](images/clip_image008.jpg)
+<img src="images/clip_image008.jpg" width="600">
 
  
 
@@ -138,7 +131,7 @@ With this we have come to the end of the session. As part of building this proje
 
 **An overview of the architecture you built:**
 
-![img](images/clip_image009.jpg)
+<img src="images/clip_image009.jpg" width="600">
 
  
 
