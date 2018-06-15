@@ -19,7 +19,8 @@ The workshop consists of 4 hands-on lab sessions:
 
 # Hands-on Lab 1: Build and train a face detection model in SageMaker
 
-In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab](https://github.com/fibbonnaci/DeepLens-workshops/tree/master/SageMaker%20lab)
+In this lab, you will build and train a face detection model. You can find the instructions here: [SageMaker lab]
+(https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
 
 # Hands-on Lab 2: Register and configure your DeepLens device
 
@@ -215,8 +216,7 @@ Role: Choose an existing role
 Existing Role: AWSDeepLensLambdaRole
 
 Click Create Function
-
-Replace the default script with the [inference script](https://github.com/fibbonnaci/DeepLens-workshops/blob/master/Inference%20Lambda/inference-lambda.py) . You can select the inference script, by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
+Replace the default script with the [inference script](https://github.com/mahendrabairagi/DeepLens-workshops/blob/master/Inference%20Lambda/inference-lambda.py) . You can select the inference script, by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
 
 In the script, you will have to provide the name for your S3 bucket. Insert your bucket name in the code below
 
@@ -326,7 +326,7 @@ Existing role: rekognizeEmotions
 
 Choose Create function
 
-Replace the default script with the script in [recognize-emotions.py](https://github.com/fibbonnaci/DeepLens-workshops/blob/master/Integrate%20with%20Rekognition/rekognize-emotions.py). You can select the script by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
+Replace the default script with the script in [recognize-emotions.py](https://github.com/mahendrabairagi/DeepLens-workshops/blob/master/Integrate%20with%20Rekognition/rekognize-emotions.py). You can select the script by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
 
 Make sure you enter the table name you created earlier in the section highlighted below:
 
