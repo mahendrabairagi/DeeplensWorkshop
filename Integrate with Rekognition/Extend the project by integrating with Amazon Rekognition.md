@@ -14,7 +14,7 @@ Primary key: s3key
 
 Use default settings
 
-![img](/images/clip_image001.jpg)
+![img](./images/clip_image001.jpg)
 
 Click on Create. This will create a table in your DynamoDB.
 
@@ -33,7 +33,7 @@ To create the lambda function, follow the steps below:
 3. Name the function- recognize-emotion. Choose Python 2.7 as the run time
 4. For the role, select ‘choose an existing role’ aand choose the “rekognizeEmotion” role we created earlier
 
-![img](/images/clip_image002.jpg)
+![img](images/clip_image002.jpg)
 
  
 
@@ -51,7 +51,7 @@ The script does the following functions:
 
 Once the script is inserted, it should look like the below:
 
-![img](/images/clip_image003.jpg)
+![img](images/clip_image003.jpg)
 
  
 
@@ -63,7 +63,7 @@ Add the “S3” trigger:
 
  
 
-![img](file:////Users/bairagi/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.jpg)
+![img](images/clip_image004.jpg)
 
  
 
@@ -79,7 +79,7 @@ Filter- .jpg
 
 Enable trigger- ON (keep the checkbox on)
 
-![img](/images/clip_image005.jpg)
+![img](images/clip_image005.jpg)
 
  
 
@@ -105,7 +105,7 @@ To view the output of your project:
 
  
 
-![img](/images/clip_image006.jpg)
+![img](images/clip_image006.jpg)
 
  
 
@@ -113,13 +113,13 @@ To view the output of your project:
 
 **NOTE:** These metrics will only appear once they have been sent to Cloudwatch via the Rekognition Lambda. It may take some time for them to appear after your model is deployed and running locally. If they **do not** appear, then there is a problem somewhere in the pipeline.
 
-![img](/images/clip_image007.jpg)
+![img](images/clip_image007.jpg)
 
  
 
 5. Next, set “Auto-refresh” to the smallest interval possible (1h), and change the “Period” to whatever works best for you (1 second or 5 seconds)
 
-![img](/images/clip_image008.jpg)
+![img](images/clip_image008.jpg)
 
  
 
@@ -138,7 +138,7 @@ With this we have come to the end of the session. As part of building this proje
 
 **An overview of the architecture you built:**
 
-![img](/images/clip_image009.png)
+![img](images/clip_image009.png)
 
  
 
