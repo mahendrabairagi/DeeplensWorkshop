@@ -148,15 +148,15 @@ Once replaced:
 9. Find your project in the list (the one you just created)
 10. Select the radio button and click Deploy
 
-<img src="images/picture16.png" width="600">
+<img src="images/picture14.png" width="600">
 
 11. Choose your device and  Click ‘Review’ 
 
-<img src="images/picture17.png" width="600">
+<img src="images/picture15.png" width="600">
 
 12. Click ‘Deploy’
 
-<img src="images/picture19.png" width="600">
+<img src="images/picture16.png" width="600">
 
  
 
