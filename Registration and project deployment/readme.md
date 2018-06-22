@@ -162,7 +162,7 @@ On the AWS DeepLens console, you can track the progress of the deployment. It ca
 
 ## View Output
 
-<details> <summary> Deeplens connected over monitor setup </summary>
+<details> <summary>Deeplens connected over monitor setup </summary>
   
  **Option 1: View over mplayer**
  
@@ -186,7 +186,7 @@ Step 3- Open a browser tab and navigate to https://0.0.0.0:4000
 View output and enjoy!
 </details>
 
-<details> <summary>Connected over headless mode,  using browser on laptop/desktop </summary>
+<details> <summary>Connected over headless mode and using browser on laptop/desktop </summary>
  
  Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
 
