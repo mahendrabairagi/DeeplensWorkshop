@@ -210,5 +210,6 @@ View the output and enjoy!
 </details>
 
 
+
 Please visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
 
