@@ -162,22 +162,14 @@ On the AWS DeepLens console, you can track the progress of the deployment. It ca
 
 ## View Output
 
-<details> <summary>If you are connected over monitor setup </summary>
+<details> <summary> Deeplens connected over monitor setup </summary>
   
  **Option 1: View over mplayer**
  
-To view the output, open a terminal (on the desktop, choose the top left button and search for terminal) and enter the following command:
+To view the output, open a terminal (on the Deeplens desktop UI, choose the top left button and search for terminal) and enter the following command:
 
 `mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg`
 
-
-if you are accessing Deeplens over SSH then use following command over SSH
-
-`ssh aws_cam@$ip_address cat /tmp/\*results.mjpeg |mplayer –demuxer lavf -cache 8092 -lavfdopts format=mjpeg:probesize=32 -`
-
-For streaming over SSH you may need to install mplayer on your laptop by
-
-`sudo apt-get install mplayer`
  
 **Option 2: View over browser**
 
@@ -194,7 +186,7 @@ Step 3- Open a browser tab and navigate to https://0.0.0.0:4000
 View output and enjoy!
 </details>
 
-<details> <summary>If you are connected over headless mode </summary>
+<details> <summary>Connected over headless mode,  using browser on laptop/desktop </summary>
  
  Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
 
@@ -209,7 +201,19 @@ Step 3- Click on **View stream**
 View the output and enjoy!
 </details>
 
+<details> <summary>Connected over headless mode and using SSH </summary>
 
+**Option 3: View over SSH **
+
+if you are accessing Deeplens over SSH then use following command over SSH
+
+`ssh aws_cam@$ip_address cat /tmp/\*results.mjpeg |mplayer –demuxer lavf -cache 8092 -lavfdopts format=mjpeg:probesize=32 -`
+
+For streaming over SSH you may need to install mplayer on your laptop by
+
+`sudo apt-get install mplayer`
+
+</details>
 
 Please visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
 
