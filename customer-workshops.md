@@ -19,13 +19,12 @@ The workshop consists of 4 hands-on lab sessions:
 
 # Hands-on Lab 1: Register and configure your DeepLens device (You can skip this lab if device registration is already complete)
 
-Follow instructions here: [Registration and Deployment lab] (https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/Registration%20and%20project%20deployment)
+Follow instructions here: [Registration and Deployment lab](https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/Registration%20and%20project%20deployment)
 
 
 # Hands-on Lab 2: Build and train a face detection model in SageMaker
 
-In this lab, you will build and train a face detection model. Follow instructions here: [SageMaker lab]
-(https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
+In this lab, you will build and train a face detection model. Follow instructions here: [SageMaker lab(https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
 
 # Hands-on Lab 3: Build a project to detect faces and send the cropped faces to S3 bucket
 
