@@ -16,77 +16,25 @@ Enter a name for your DeepLens device (for example, “MyDevice”), and select 
 
 ### Step 2- Provide permissions
 
-AWS DeepLens projects require different levels of permissions, which are set by AWS Identity and Access Management (IAM) roles. When registering your device for the first time, you'll need to create each one of these IAM roles.
+AWS DeepLens projects require different levels of permissions, which are set by AWS Identity and Access Management (IAM) roles. When registering your device for the first time, choose **Create roles** under Permissions to have the required IAM roles created. 
 
-### Role 1- IAM role for AWS DeepLens
+![create roles](https://user-images.githubusercontent.com/11222214/41578790-cad777a4-7348-11e8-97b1-b12f9a8f6549.jpg)
 
-Select Create a role in IAM.
+Then choose **Next**
 
-![create role-deeplens](https://user-images.githubusercontent.com/11222214/38657020-e6c85cd6-3dd2-11e8-8f02-a737e1eef657.JPG)
-
-Use case is selected by default. Click Next:Permissions
-
-Click Next:Review
-
-Click Create role 
-
-![service role review page](https://user-images.githubusercontent.com/11222214/38657029-f6ea2aae-3dd2-11e8-99f6-0d7230a1eaae.JPG)
-
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensServiceRole.**
-
-![refresh role- service roles](https://user-images.githubusercontent.com/11222214/38657050-09a0a7ea-3dd3-11e8-8a80-403d61a6a7e3.JPG)
-
-
-### Role 2- IAM role for AWS Greengrass 
-
-Select Create a role in IAM.
-
-Use case is selected by default. Click Next:Permissions
-
-Click Next:Review
-
-Click Create role 
-
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensGreengrassRole.**
-
-### Role 3- IAM group role for AWS Greengrass
-
-Select Create a role in IAM.
-Use case is selected by default. Click Next:Permissions
-Click Next:Review
-Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensGreengrassGroupRole.**
-
-### Role 4- IAM role for Amazon SageMaker
-
-Select Create a role in IAM.
-Use case is selected by default. Click Next:Permissions
-Click Next:Review
-Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensSageMakerRole.**
-
-### Role 5- IAM role for AWS Lambda
-
-Select Create a role in IAM.
-Use case is selected by default. Click Next:Permissions
-Click Next:Review
-Click Create role 
-Return back to the Set Permission page, select on Refresh IAM roles and select the newly created Role name **AWSDeepLensLambdaRole.**
-
-Note: These roles are very important. Make sure that you select the right role for each one, as you can see in the screenshot.
-
-![all roles](https://user-images.githubusercontent.com/11222214/38657064-1e278a8a-3dd3-11e8-9dd9-65bbffb22a92.JPG)
-
-Once you have all the roles correctly created and populated, select **Next.**
+![create roles- next](https://user-images.githubusercontent.com/11222214/41578802-e0c3ccc0-7348-11e8-9690-27adb740049c.jpg)
 
 ### Step 3- Download certificate
 In this step, you will download and save the required certificate to your computer. You will use it later to enable your DeepLens to connect to AWS.
 
-Select Download certificate and note the location of the certificates.zip file. Select Register.
+Select Download certificate and note the location of the certificates.zip file. Note: Do not open the zip file. You will attach this zip file later on during device registration.
 
-![download certificate](https://user-images.githubusercontent.com/11222214/38657089-3219184c-3dd3-11e8-8f06-2609898b07cc.JPG)
+![download certificate](https://user-images.githubusercontent.com/11222214/41578863-2fe8e4e8-7349-11e8-999b-8b4890bd4136.JPG)
 
-Note: Do not open the zip file. You will attach this zip file later on during device registration.
+Select **Continue.**
+
+![download certificate- continue](https://user-images.githubusercontent.com/11222214/41578893-5b928842-7349-11e8-867b-bf79d293bd2f.JPG)
+
 
 ## Configure your DeepLens
 
@@ -98,7 +46,9 @@ Power ON your device
   
   Make sure the middle LED is blinking. If it is not, then use a pin to reset the device. The reset button is located at the back of the device
   
-  Navigate to the setup page at **192.168.0.1.**
+ Navigate to the setup page by choosing **Complete the setup** 
+ 
+ ![last step](https://user-images.githubusercontent.com/11222214/41578985-c854efba-7349-11e8-8c73-62267c61091a.JPG)
   
 </details>
   
@@ -110,9 +60,9 @@ Power ON your device
   
   Connect to the device network via the SSID and provide the password
   
-  Navigate to the setup page at **192.168.0.1.**
+  Navigate to the setup page by choosing **Complete the setup** 
   
-  ![set up guide](https://user-images.githubusercontent.com/11222214/38657118-5266e610-3dd3-11e8-8c64-23fd362e708a.JPG)
+  ![last step](https://user-images.githubusercontent.com/11222214/41578985-c854efba-7349-11e8-8c73-62267c61091a.JPG)
   
 </details>
 
@@ -124,6 +74,14 @@ Select Save.
 
 ![network connection](https://user-images.githubusercontent.com/11222214/38657139-77c96aa4-3dd3-11e8-8cba-97dc3c47fc66.JPG)
 
+If this is your first time registering the device, you will see the updates available screen. Choose **Install and Reboot** It will take couple of minutes for the updates to come through. After the updates are installed, the device will reboot automatically
+
+![install and reboot](https://user-images.githubusercontent.com/11222214/41579269-14d84e30-734b-11e8-8894-c4a76f1715d5.JPG)
+
+On rebooting, the device will come back to the install and reboot screen. From the URL, delete the #softwareUpdate
+
+![software update remove](https://user-images.githubusercontent.com/11222214/41579379-a3deed32-734b-11e8-894a-c209cb7a7cca.JPG)
+
 ### Step 5- Attach Certificates
 
 Select Browse in the Certificate section. Select the zip file you downloaded in Step 4 
@@ -132,7 +90,13 @@ Select Next.
 
 ![upload certificate](https://user-images.githubusercontent.com/11222214/38657156-8cc8c5b2-3dd3-11e8-9261-dda8a8925cca.JPG)
 
-### Step 6- Device set up.
+### Step 6- Download Streaming Certificate
+
+Choose **Download** . Then choose **Next**
+
+![download streaming cert](https://user-images.githubusercontent.com/11222214/41579452-e253dca8-734b-11e8-9a47-5a7f48b6a0db.JPG)
+
+### Step 7- Device set up.
 
 If you are on the device summary page- Please do not make changes to the password.
 
@@ -142,10 +106,12 @@ Note: Instead, if you are presented with the below screen, type the device passw
 
 ### Step 7- Select Finish
 
-![set up summary finish](https://user-images.githubusercontent.com/11222214/38657410-ea300d36-3dd4-11e8-9312-c3ef909a1771.JPG)
+![summary](https://user-images.githubusercontent.com/11222214/41579495-0d5235e4-734c-11e8-987a-18a0b83259cc.JPG)
 
 
-Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Completed under Registration status.
+Congratulations! You have successfully registered and configured your DeepLens device. To verify, return to [AWS DeepLens console](https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects) and select **Devices** in the left side navigation bar and verify that your device has completed the registration process. You should see a green check mark and Registered under Registration status.
+
+![device registered successfully](https://user-images.githubusercontent.com/11222214/41579540-3cc3560a-734c-11e8-82c0-6fc18c3952c8.JPG)
 
 ## Deploy Face Recognition project
 
@@ -194,6 +160,12 @@ Select Deploy.
 
 On the AWS DeepLens console, you can track the progress of the deployment. It can take a few minutes to transfer a large model file to the device. Once the project is downloaded, you will see a success message displayed and the banner color will change from blue to green.
 
+## View Output
+
+<details> <summary>If you are connected over monitor setup </summary>
+  
+ **Option 1: View over mplayer**
+ 
 To view the output, open a terminal (on the desktop, choose the top left button and search for terminal) and enter the following command:
 
 `mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg`
@@ -206,6 +178,37 @@ if you are accessing Deeplens over SSH then use following command over SSH
 For streaming over SSH you may need to install mplayer on your laptop by
 
 `sudo apt-get install mplayer`
-  
-or visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
+ 
+**Option 2: View over browser**
+
+Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
+
+![view output](https://user-images.githubusercontent.com/11222214/41580046-41fab7d8-734e-11e8-8e1f-74e772f4f520.JPG)
+
+Step 2- Choose Firefox browser for Windows and Mac. Follow the instructions
+
+![step 1 view output](https://user-images.githubusercontent.com/11222214/41580333-67a45326-734f-11e8-9219-503499a118dc.JPG)
+
+Step 3- Open a browser tab and navigate to https://0.0.0.0:4000
+
+View output and enjoy!
+</details>
+
+<details> <summary>If you are connected over headless mode </summary>
+ 
+ Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
+
+![view output](https://user-images.githubusercontent.com/11222214/41580046-41fab7d8-734e-11e8-8e1f-74e772f4f520.JPG)
+
+Step 2- Choose your browser. Follow the instructions
+
+![step 1 view output](https://user-images.githubusercontent.com/11222214/41580333-67a45326-734f-11e8-9219-503499a118dc.JPG)
+
+Step 3- Click on **View stream**
+
+View the output and enjoy!
+</details>
+
+
+Please visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
 
