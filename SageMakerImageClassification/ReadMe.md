@@ -710,6 +710,6 @@ Once the project is created, select the project and choose Deploy to device. Cho
 Now you are ready to deploy your own object detection model. Choose Deploy.
 
 ![](images/sagemaker-to-deeplens-25.gif)
-
+![](images/sagemaker-to-deeplens-26.gif)
 
 Congratulations! You have built your own object classification model based on a dataset and deployed it to AWS DeepLens for inference.
