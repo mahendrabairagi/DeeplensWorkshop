@@ -9,29 +9,30 @@ we will walk you through building a model to classify common objects. This objec
 
 To build you own model, you first need to identify a dataset. You can bring your own dataset or use an existing one. In this tutorial, we show you how to build an object detection model in Amazon SageMaker using Caltech-256 image classification dataset.
 
-In order to follow through with this tutorial, ensure that your DeepLens software version is updated to version 1.2.3 and above and MXNet version 0.12.
+In order to follow through with this tutorial, ensure that your DeepLens software version is updated to version 1.3+ and above and MXNet version 1.2+
 
 To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/dashboard)
 
 
-![](sagemaker-to-deeplens-1.gif)
+![](images/sagemaker-to-deeplens-1.gif)
 
 
 Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance.
 
+![](images/sagemaker-to-deeplens-2.gif)
 
 
 Once your notebook instance is created, open the notebook instance you just created.
 
-
+![](images/sagemaker-to-deeplens-3.gif)
 
 You will see the Jupyter notebook hosted in your instance.
 
-
+![](images/sagemaker-to-deeplens-4.gif)
 
 Create a new notebook by choosing New and conda_mxnet_p36 kernel.
 
-
+![](images/sagemaker-to-deeplens-5.gif)
 
 Let’s start by importing the necessary packages. Importing boto3 SDK for Python allows you to access Amazon services like S3. get_execution_role will allow Amazon SageMaker to assume the role created during instance creation and accesses resources on your behalf.
 
@@ -88,7 +89,7 @@ Batch size refers to the number of training examples utilized in one iteration. 
 ```
 # The algorithm supports multiple network depth (number of layers). They are 18, 34, 50, 101, 152 and 200
 # For this training, we will use 18 layers
-num_layers = "50" 
+num_layers = "18" 
 # we need to specify the input image shape for the training data
 image_shape = "3,224,224"
 # we also need to specify the number of training samples in the training set
@@ -99,13 +100,13 @@ num_classes = "257"
 # batch size for training
 mini_batch_size =  "128"
 # number of epochs
-epochs = "300"
+epochs = "3"
 # learning rate
 learning_rate = "0.1"
 #optimizer
 #optimizer ='Adam'
 #checkpoint_frequency
-checkpoint_frequency = "300"
+checkpoint_frequency = "3"
 #scheduler_step
 lr_scheduler_step="30,90,180"
 #scheduler_factor
@@ -232,34 +233,42 @@ except:
     
 To check the status, go to SageMaker dashboard and choose Jobs. Select the Job you have defined and scroll down to the details page on Job to “monitor” section. You will see a link to logs which will open CloudWatch.
 
+![](images/sagemaker-to-deeplens-6.gif)
+
+![](images/sagemaker-to-deeplens-7.gif)
 
 Once you run the notebook, it will create a model which can be directly imported into AWS DeepLens as a project. Once the training is complete, your model is ready to be imported in to AWS DeepLens.
 
 Ensure that the mxnet version on your AWS DeepLens is 1.2.0 +. In case you need to upgrade, you can type the following code in your Ubuntu terminal.
 
 sudo pip3 install mxnet==1.2.0
+
 Now Log into AWS DeepLens Console (https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects)
 
+![](images/sagemaker-to-deeplens-8.gif)
 
 
 Create new project
 
+![](images/sagemaker-to-deeplens-9.gif)
 
 Choose – Create a new blank project
 
+![](images/sagemaker-to-deeplens-10.gif)
 
 Name project – e.g. imageclassification
-
+![](images/sagemaker-to-deeplens-11.gif)
 
 Select Add Model – this will open new page, “Import model to AWS Deeplens”
 
 Select Amazon SageMaker trained model, in the Model setting, Amazon SageMaker training job ID drop down, select the imageclassification model you selected. In Model name choose model name e.g. imageclassification, keep description as image classification.
 
+![](images/sagemaker-to-deeplens-12.gif)
 
 
 Go back to import model screen, select the imageclassification model you imported earlier, click Add model. Once model is added, you need to add a lambda function by choosing Add function.
 
-
+![](images/sagemaker-to-deeplens-13.gif)
 
 To create a AWS DeepLens lambda function, you can follow the blog post: Dive deep into AWS DeepLens Lambda functions and the new model optimizer.
 
@@ -268,16 +277,23 @@ To provide an easy reference, we have provided the instructions for the lambda f
 To create an inference Lambda function, use the AWS Lambda console and follow the steps below:
 
 Choose Create function. You customize this function to run inference for your deep learning models.
+![](images/sagemaker-to-deeplens-14.gif)
 
 Choose Blueprints
 Search for the greengrass-hello-world blueprint.
 
+![](images/sagemaker-to-deeplens-15.gif)
+
 Give your Lambda function the same name as your model e.g. imageclassification_lambda.
 Choose an existing IAM role: AWSDeepLensLambdaRole. You must have created this role as part of the registration process.
+
+![](images/sagemaker-to-deeplens-16.gif)
 
 Choose Create function.
 In Function code, make sure the handler is greengrassHelloWorld.function_handler.
 In the GreengrassHello file, remove all of the code. You will write the code for inference Lambda function in this file.
+
+![](images/sagemaker-to-deeplens-17.gif)
 
 Replace existing code with code below
 
@@ -328,8 +344,8 @@ def greengrass_infinite_infer_run():
         input_width = 224
         input_height = 224
         model_name = "image-classification"
-        error, model_path = mo.optimize(model_name,input_width,input_height, aux_inputs={'--epoch': 300})
-        # The aux_inputs is equal to the number of epochs and in this case, it is 300
+        error, model_path = mo.optimize(model_name,input_width,input_height, aux_inputs={'--epoch': 3})
+        # The aux_inputs is equal to the number of epochs and in this case, it is 3
         # Load model to GPU (use {"GPU": 0} for CPU)
         mcfg = {"GPU": 1}
         model = awscam.Model(model_path, mcfg)
@@ -375,7 +391,7 @@ def greengrass_infinite_infer_run():
             msg += "}"  
             
             client.publish(topic=iotTopic, payload = msg)
-cv2.putText(frame, labels[top_k[0]["label"]], (0,22), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 165, 20), 4)
+	    cv2.putText(frame, labels[top_k[0]["label"]], (0,22), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 165, 20), 4)
             global jpeg
             ret,jpeg = cv2.imencode('.jpg', frame)
             
@@ -400,6 +416,7 @@ def function_handler(event, context):
  
 To add the text file to your lambda function: In the Function code block, choose File. Then choose New File, add following code, then save file as caltech256_labels.txt
 
+![](images/sagemaker-to-deeplens-18.gif)
 ```
 
 #Insert caltech256_labels.txt
@@ -664,23 +681,35 @@ To add the text file to your lambda function: In the Function code block, choose
 
 ```
 
+![](images/sagemaker-to-deeplens-19.gif)
+
 Save the lambda function
+
+![](images/sagemaker-to-deeplens-20.gif)
 
 Now deploy the lambda function by selecting Actions dropdown button. And then select Publish new version
 
+![](images/sagemaker-to-deeplens-21.gif)
+
+
 This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
+
+![](images/sagemaker-to-deeplens-22.gif)
 
 Once done, add the lambda function to the project and choose Create new project to finish the project creation.
 You will see your project created in the Projects list.
 
+![](images/sagemaker-to-deeplens-23.gif)
  
 
 Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
 
+![](images/sagemaker-to-deeplens-24.gif)
 
 
 Now you are ready to deploy your own object detection model. Choose Deploy.
 
- 
+![](images/sagemaker-to-deeplens-25.gif)
+
 
 Congratulations! You have built your own object classification model based on a dataset and deployed it to AWS DeepLens for inference.
