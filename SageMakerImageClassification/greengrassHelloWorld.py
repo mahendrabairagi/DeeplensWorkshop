@@ -43,7 +43,7 @@ def greengrass_infinite_infer_run():
         input_width = 224
         input_height = 224
         model_name = "image-classification"
-        error, model_path = mo.optimize(model_name,input_width,input_height, aux_inputs={'--epoch': 300})
+        error, model_path = mo.optimize(model_name,input_width,input_height, aux_inputs={'--epoch': 3})
         # Load model to GPU (use {"GPU": 0} for CPU)
         mcfg = {"GPU": 1}
         model = awscam.Model(model_path, mcfg)
