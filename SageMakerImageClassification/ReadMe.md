@@ -17,7 +17,7 @@ To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https:/
 ![](images/sagemaker-to-deeplens-1.gif)
 
 
-Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance.
+Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance. ***GIVE Notebook Instance unique name e.g. imageclassiciation-name_date***
 
 ![](images/sagemaker-to-deeplens-2.gif)
 
@@ -41,8 +41,11 @@ Let’s start by importing the necessary packages. Importing boto3 SDK for Pytho
 import boto3
 from sagemaker import get_execution_role
 role = get_execution_role()
-Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’.
+```
 
+Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. Deeplens-imageclassfication-name-date***
+
+```
 bucket='deeplens-imageclassification' 
 Next we define the containers. Containers are docker containers and the training job defined in this notebook will run in the container for your region.
 
