@@ -44,7 +44,8 @@ role = get_execution_role()
 Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. Deeplens-imageclassfication-name-date***
 
 ```
-bucket='deeplens-imageclassification' 
+#change the bucket name to your bucketname
+bucket='deeplens-imageclassification-name-date' 
 Next we define the containers. Containers are docker containers and the training job defined in this notebook will run in the container for your region.
 
 containers = {'us-west-2': '433757028032.dkr.ecr.us-west-2.amazonaws.com/image-classification:latest',
@@ -120,8 +121,11 @@ To train a model in Amazon SageMaker, you create a training job. The training jo
 
 The URL of the Amazon Simple Storage Service (Amazon S3) bucket where you’ve stored the training data.
 The compute resources that you want Amazon SageMaker to use for model training. Compute resources are ML compute instances that are managed by Amazon SageMaker.
+
 The URL of the S3 bucket where you want to store the output of the job.
+
 The Amazon Elastic Container Registry path where the training code is stored.
+
 In this sample, we pass the default image classifier (ResNet) built in Amazon SageMaker. The checkpoint_frequency determines the frequency by which model files are stored during training. Since we only need the final model file for deeplens, it is set equal to the number of epochs.
 
 Please make a note of job_name_prefix, S3OutputPath, InstanceType, InstanceCount.
@@ -135,7 +139,9 @@ from time import gmtime, strftime
 
 s3 = boto3.client('s3')
 # create unique job name 
-job_name_prefix = 'DEMO-imageclassification'
+# Make sure job_name_prefix is unique e.g. add yourname to your job_name_prefix
+
+job_name_prefix = 'DEMO-imageclassification-yourname'
 timestamp = time.strftime('-%Y-%m-%d-%H-%M-%S', time.gmtime())
 job_name = job_name_prefix + timestamp
 training_params = \
@@ -277,29 +283,33 @@ To provide an easy reference, we have provided the instructions for the lambda f
 
 To create an inference Lambda function, use the AWS Lambda console and follow the steps below:
 
-Choose Create function. You customize this function to run inference for your deep learning models.
+ 1. Choose Create function. You customize this function to run inference for your deep learning models.
 ![](images/sagemaker-to-deeplens-14.gif)
 
-Choose Blueprints
-Search for the greengrass-hello-world blueprint.
+2. Choose Blueprints
+
+3. Search for the greengrass-hello-world blueprint.
 
 ![](images/sagemaker-to-deeplens-15.gif)
 
-Give your Lambda function the same name as your model e.g. imageclassification_lambda.
-Choose an existing IAM role: AWSDeepLensLambdaRole. You must have created this role as part of the registration process.
+4. Give your Lambda function the unique name  e.g. imageclassification_yourname_lambda.
+
+5. Choose an existing IAM role: AWSDeepLensLambdaRole. You must have created this role as part of the registration process.
 
 ![](images/sagemaker-to-deeplens-16.gif)
 
-Choose Create function.
-In Function code, make sure the handler is greengrassHelloWorld.function_handler.
-In the GreengrassHello file, remove all of the code. You will write the code for inference Lambda function in this file.
+6. Choose Create function.
+
+7. In Function code, make sure the handler is greengrassHelloWorld.function_handler.
+
+8. In the GreengrassHello file, remove all of the code. You will write the code for inference Lambda function in this file.
 
 ![](images/sagemaker-to-deeplens-17.gif)
 
 Replace existing code with code below
 
 ```
-#Insert imageclassification_lambda.py
+#Insert imageclassification_yourname_lambda.py
 #
 # Copyright Amazon AWS DeepLens, 2017
 #
@@ -684,26 +694,26 @@ To add the text file to your lambda function: In the Function code block, choose
 
 ![](images/sagemaker-to-deeplens-19.gif)
 
-Save the lambda function
+10. Save the lambda function
 
 ![](images/sagemaker-to-deeplens-20.gif)
 
-Now deploy the lambda function by selecting Actions dropdown button. And then select Publish new version
+11. Now deploy the lambda function by selecting Actions dropdown button. And then select Publish new version
 
 ![](images/sagemaker-to-deeplens-21.gif)
 
 
-This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
+11. This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
 
 ![](images/sagemaker-to-deeplens-22.gif)
 
-Once done, add the lambda function to the project and choose Create new project to finish the project creation.
+12. Once done, add the lambda function to the project and choose Create new project to finish the project creation.
 You will see your project created in the Projects list.
 
 ![](images/sagemaker-to-deeplens-23.gif)
  
 
-Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
+13. Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
 
 ![](images/sagemaker-to-deeplens-24.gif)
 
