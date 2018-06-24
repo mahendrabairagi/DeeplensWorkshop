@@ -425,7 +425,7 @@ def function_handler(event, context):
  
 ```
  
-To add the text file to your lambda function: In the Function code block, choose File. Then choose New File, add following code, then save file as caltech256_labels.txt
+9. To add the text file to your lambda function: In the Function code block, choose File. Then choose New File, add following code, then save file as caltech256_labels.txt
 
 ![](images/sagemaker-to-deeplens-18.gif)
 ```
