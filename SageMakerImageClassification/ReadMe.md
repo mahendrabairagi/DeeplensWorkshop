@@ -703,17 +703,17 @@ def function_handler(event, context):
 ![](images/sagemaker-to-deeplens-21.gif)
 
 
-11. This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
+12. This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
 
 ![](images/sagemaker-to-deeplens-22.gif)
 
-12. Once done, add the lambda function to the project and choose Create new project to finish the project creation.
+13. Once done, add the lambda function to the project and choose Create new project to finish the project creation.
 You will see your project created in the Projects list.
 
 ![](images/sagemaker-to-deeplens-23.gif)
  
 
-13. Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
+14. Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
 
 ![](images/sagemaker-to-deeplens-24.gif)
 
