@@ -10,7 +10,7 @@ This limits both the number of API calls we make, as well as the size of content
 
 In this challenge, you will use SageMaker in your efforts to deploy a face-detection model. You will first launch a SageMaker notebook instance; from your notebook, you will be able to explore the data your model will train on, see how the model is trained, and deploy a pre-trained model to an inference endpoint. You will also create an S3 bucket for the endpoint to store detected faces, which you will need as part of your app's pipeline.
 
-## Instructions
+## Instruction
 
 ### Launching a SageMaker Notebook Instance
 
@@ -97,9 +97,8 @@ The "New" tab on the top right can be used to create new files, as well as open 
 Once in the terminal, run the following commands to clone the repo into the dashboard's root directory:
 ```shell
 cd SageMaker/
-git clone https://github.com/kenstler/aws-ml-iot-lab.git
+git clone https://github.com/mahendrabairagi/DeeplensWorkshop.git
 ```
-![Alt text](../screenshots/terminal_0.png)
 
 Next, close the terminal tab and go back to the dashboard. You should see a new folder, "aws-ml-iot-lab". 
 
