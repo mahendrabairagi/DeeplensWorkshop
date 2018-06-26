@@ -724,3 +724,60 @@ Now you are ready to deploy your own object detection model. Choose Deploy.
 ![](images/sagemaker-to-deeplens-26.gif)
 
 Congratulations! You have built your own object classification model based on a dataset and deployed it to AWS DeepLens for inference.
+
+## View Output
+
+<details> <summary>Deeplens connected over monitor setup </summary>
+  
+ **Option 1: View over mplayer**
+ 
+To view the output, open a terminal (on the Deeplens desktop UI, choose the top left button and search for terminal) and enter the following command:
+
+`mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg`
+
+ 
+**Option 2: View over browser**
+
+Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
+
+![view output](https://user-images.githubusercontent.com/11222214/41580046-41fab7d8-734e-11e8-8e1f-74e772f4f520.JPG)
+
+Step 2- Choose Firefox browser for Windows and Mac. Follow the instructions
+
+![step 1 view output](https://user-images.githubusercontent.com/11222214/41580333-67a45326-734f-11e8-9219-503499a118dc.JPG)
+
+Step 3- Open a browser tab and navigate to https://0.0.0.0:4000
+
+View output and enjoy!
+</details>
+
+<details> <summary>Connected over headless mode and using browser on laptop/desktop </summary>
+ 
+ Step 1- From the left navigation, Choose Devices. Choose your device. Choose View Output
+
+![view output](https://user-images.githubusercontent.com/11222214/41580046-41fab7d8-734e-11e8-8e1f-74e772f4f520.JPG)
+
+Step 2- Choose your browser. Follow the instructions
+
+![step 1 view output](https://user-images.githubusercontent.com/11222214/41580333-67a45326-734f-11e8-9219-503499a118dc.JPG)
+
+Step 3- Click on **View stream**
+
+View the output and enjoy!
+</details>
+
+<details> <summary>Connected over headless mode and using SSH </summary>
+
+**Option 3: View over SSH **
+
+if you are accessing Deeplens over SSH then use following command over SSH
+
+`ssh aws_cam@$ip_address cat /tmp/\*results.mjpeg |mplayer –demuxer lavf -cache 8092 -lavfdopts format=mjpeg:probesize=32 -`
+
+For streaming over SSH you may need to install mplayer on your laptop by
+
+`sudo apt-get install mplayer`
+
+</details>
+
+Please visit https://docs.aws.amazon.com/deeplens/latest/dg/deeplens-viewing-device-output-on-device.html for more options to view the device stream
