@@ -2403,7 +2403,7 @@ def get_detector(net, prefix, epoch, data_shape, mean_pixels, ctx, num_class,
 
 def model_fn(model_dir):
     
-    ctx = [mx.gpu()]
+    ctx = mx.cpu()
 
     # parse image list
     image_list = ['tmp.jpg'] 
