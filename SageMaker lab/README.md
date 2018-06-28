@@ -100,15 +100,15 @@ cd SageMaker/
 git clone https://github.com/mahendrabairagi/DeeplensWorkshop.git
 ```
 
-Next, close the terminal tab and go back to the dashboard. You should see a new folder, "aws-ml-iot-lab". 
+Next, close the terminal tab and go back to the dashboard. You should see a new folder, "DeeplensWorkshop". 
 
 ![Alt text](../screenshots/jupyter_dashboard_2.png)
 
-Select that folder, then select the folder "Prep_Challenge". You should see contents similar to this:
+Select that folder, then select the folder "SageMakerLab". You should see contents similar to this:
 
 ![Alt text](../screenshots/jupyter_dashboard_3.png)
 
-Next, click on "SSD_Object_Detection_SageMaker_v3nb" to open up the notebook. You should now be looking at a Jupyter notebook:
+Next, click on "SSD_Object_Detection_SageMaker_v3" to open up the notebook. You should now be looking at a Jupyter notebook:
 
 ![Alt text](../screenshots/jupyter_notebook_0.png)
 
