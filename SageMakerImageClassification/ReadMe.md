@@ -15,7 +15,7 @@ To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https:/
 ![](images/sagemaker-to-deeplens-1.gif)
 
 
-Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance. ***GIVE Notebook Instance unique name e.g. imageclassiciation-name_date***
+Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance. ***GIVE Notebook Instance unique name e.g. imageclassiciation-name-date***
 
 ![](images/sagemaker-to-deeplens-2.gif)
 
@@ -41,19 +41,19 @@ from sagemaker import get_execution_role
 role = get_execution_role()
 ```
 
-Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. Deeplens-imageclassfication-name-date***
+#Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. Deeplens-imageclassfication-name-date***
 
 ```
 #change the bucket name to your bucketname
 bucket='deeplens-imageclassification-name-date' 
-Next we define the containers. Containers are docker containers and the training job defined in this notebook will run in the container for your region.
+#Next we define the containers. Containers are docker containers and the training job defined in this notebook will run in the container for your region.
 
 containers = {'us-west-2': '433757028032.dkr.ecr.us-west-2.amazonaws.com/image-classification:latest',
               'us-east-1': '811284229777.dkr.ecr.us-east-1.amazonaws.com/image-classification:latest',
               'us-east-2': '825641698319.dkr.ecr.us-east-2.amazonaws.com/image-classification:latest',
               'eu-west-1': '685385470294.dkr.ecr.eu-west-1.amazonaws.com/image-classification:latest'}
 training_image = containers[boto3.Session().region_name]
-Next let’s import the dataset and upload it to your S3 bucket. We will download the train and validation sets for Caltech-256 and upload it to the S3 bucket created earlier.
+#Next let’s import the dataset and upload it to your S3 bucket. We will download the train and validation sets for Caltech-256 and upload it to the S3 bucket created earlier.
 
 import os 
 import urllib.request
