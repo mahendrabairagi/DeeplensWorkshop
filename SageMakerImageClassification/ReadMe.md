@@ -41,7 +41,7 @@ from sagemaker import get_execution_role
 role = get_execution_role()
 ```
 
-#Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. Deeplens-imageclassfication-name-date***
+#Next we define a bucket which hosts the dataset that will be used. In this example, the dataset is Caltech- 256. Create a bucket in your S3. The name for your bucket must contain the prefix ‘deeplens’. In this example, the bucket is ‘deeplens-imageclassification’. ***Make Sure S3 bucket name is unique, e.g. deeplens-imageclassfication-name-date***
 
 ```
 #change the bucket name to your bucketname
