@@ -1,4 +1,4 @@
-# Prep Challenge: Launching a SageMaker Endpoint for Face-Detection
+# Challenge: Launching a SageMaker Endpoint for Face-Detection
 
 ## Summary
 
@@ -8,7 +8,7 @@ The first stop in the pipeline of your Crowd Emotion Tracking App is a face-dete
 
 This limits both the number of API calls we make, as well as the size of content we send.
 
-In this challenge, you will use SageMaker in your efforts to deploy a face-detection model. You will first launch a SageMaker notebook instance; from your notebook, you will be able to explore the data your model will train on, see how the model is trained, and deploy a pre-trained model to an inference endpoint. You will also create an S3 bucket for the endpoint to store detected faces, which you will need as part of your app's pipeline.
+In this challenge, you will use SageMaker in your efforts to deploy a face-detection model. You will first launch a SageMaker notebook instance; from your notebook, you will be able to explore the data your model will train on, see how the model is trained, and deploy a -trained model to an inference endpoint. You will also create an S3 bucket for the endpoint to store detected faces, which you will need as part of your app's pipeline.
 
 ## Instruction
 
@@ -119,9 +119,9 @@ The markdown blocks are just there to provide accompanying documentation to the 
 The ipython kernel keeps track of the state of the code ran so far, so it's important to run code blocks sequentially from the top-down so it can process in the correct order. When you run a code block, the "In" next to the block indicates the state of the kernel; it will either show a "\*" to indicate that the code block is still processing, or it will show an integer that shows the order in which the blocks were run since the notebook was launched. (These are already there by default).
 
 Please proceed to run each code block.
+When you run last cell with "net_sagemaker.fit(inputs)" 
+***Please make note of log "INFO:sagemaker:Creating training-job with name: sagemaker-mxnet-xxx-xxx-xx"***
+You will need this Sagemaker job name in the model deployment part of lab.
+This blog does actual model training and may take 10-15 mins.
 
-By the end of the notebook, you should have successfully launched a SageMaker endpoint that is running inference with a face detection model, and have sent a test image to the endpoint. The endpoint will have returned the detections, but it also will push the face crops to S3.
-
-You can check this by going to your S3 bucket, where you'll find two objects uploaded to the bucket; the two face crops from the test image.
-
-You've now completed the Pre-Challenge.
+You've now completed the Challenge.
