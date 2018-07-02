@@ -21,9 +21,9 @@
 ![image](/screenshots/Slide10.jpeg)
 
 # MISC:
-[link to Deeplens troubleshooting guide](https://s3.amazonaws.com/deeplens-public/DeepLens_Troubleshooting_Guide.pdf)
+[Link to Deeplens troubleshooting guide](https://s3.amazonaws.com/deeplens-public/DeepLens_Troubleshooting_Guide.pdf)
 
-[link to Deeplens Forum](https://forums.aws.amazon.com/forum.jspa?forumID=275)
+[Link to Deeplens Forum](https://forums.aws.amazon.com/forum.jspa?forumID=275)
 
-[link to Deeplens community projects](https://aws.amazon.com/deeplens/community-projects/)
+[Link to Deeplens community projects](https://aws.amazon.com/deeplens/community-projects/)
 
