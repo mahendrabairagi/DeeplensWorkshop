@@ -1,6 +1,6 @@
 # In this lab we will create a Image Classification model and deploy that model on Deeplens
 
-I will walk you through building a model to classify common objects. This object classification model is based on Caltech-256 dataset and is trained using ResNet network. Through this walk through tutorial, you will build an object classifier that can identify 256 commonly found objects.
+Lets build model to classify common objects. This object classification model is based on Caltech-256 dataset and is trained using ResNet network. Through this walk through tutorial, you will build an object classifier that can identify 256 commonly found objects.
 
 ***Source code for The SageMaker notebook Sagemaker_Imageclassification.ipynb and related lamda greegrassHelloWorld.py and label file caltech256_labels.txt is attached to this git*** No need to copy paste the code from readme.
 
