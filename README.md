@@ -1,2 +1,1 @@
-!(/screenshots/Slide01.jpeg)
-
+![image](/screenshots/Slide01.jpeg)
