@@ -85,7 +85,7 @@ Note:It is important that you publish the lambda  function, else you cannot acce
 
 #### Deploy project:
 
-**Step 1- Create Project**
+**Step I- Create Project**
 
 The AWS DeepLens console should open on the Projects screen, select Create new project on the top right (if you don’t see the project list view, click on the hamburger menu on the left and select Projects)
 
@@ -95,13 +95,13 @@ Choose a blank template and scroll down the screen to select Next
 
 Provide a name for your project: face-detection-your-name
 
-Click on Add Models and choose face_detection (One you created during SageMaker Lab)
+Click on Add Models. Selected Import model link in the bottom of the "Add model" page. Select Import source as "Amazon SageMaker trained model", from drop downbox, select the Sagemaker job ID of job you created in Step 2.
 
 Click on Add function and choose the lambda function you just created: Deeplens-sentiment-your-name
 
 Click Create
 
-**Step 2- Deploy to device**
+**Step II- Deploy to device**
 In this step, you will deploy the Face detection project to your AWS DeepLens device.
 
 Select the project you just created from the list by choosing the radio button
@@ -129,7 +129,7 @@ You will find your cropped faces uplaod to your S3 bucket.
 
 # Hands-on Step 4: Identify emotions
 
-**Step 1- Create DynamoDB table**
+**Step I- Create DynamoDB table**
 
 Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for Dynamo
 
@@ -140,7 +140,7 @@ Primary key: s3key
 
 Click on Create. This will create a table in your DynamoDB.
 
-**Step 2- Create a role for cloud lambda function**
+**Step II- Create a role for cloud lambda function**
 
 Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for IAM
 
@@ -164,7 +164,7 @@ Provide a name for the role: rekognizeEmotions
 Choose 'Create role'
 
 
-**Step 3- Create a lambda function that runs in the cloud**
+**Step III- Create a lambda function that runs in the cloud**
 
 The inference lambda function that you deployed earlier will upload the cropped faces to your S3. On S3 upload, this new lambda function gets triggered and runs the Rekognize Emotions API by integrating with Amazon Rekognition. 
 
@@ -202,7 +202,7 @@ Save the lambda function
 
 Under 'Actions' tab choose **Publish**
 
-**Step 4- View the emotions on a dashboard**
+**Step IV- View the emotions on a dashboard**
 
 Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for Cloudwatch
 
