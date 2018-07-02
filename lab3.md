@@ -17,16 +17,16 @@ In this project you will learn to build a deep learning model to identify and an
 
 The workshop consists of 4 hands-on lab sessions:
 
-# Hands-on Lab 1: Register and configure your DeepLens device (You can skip this lab if device registration is already complete)
+# Hands-on Step 1: Register and configure your DeepLens device (You can skip this lab if device registration is already complete)
 
 Follow instructions here: [Registration and Deployment lab](https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/Registration%20and%20project%20deployment)
 
 
-# Hands-on Lab 2: Build and train a face detection model in SageMaker
+# Hands-on Step 2: Build and train a face detection model in SageMaker
 
 In this lab, you will build and train a face detection model. Follow instructions here: [SageMaker lab](https://github.com/mahendrabairagi/DeeplensWorkshop/tree/master/SageMaker%20lab)
 
-# Hands-on Lab 3: Build a project to detect faces and send the cropped faces to S3 bucket
+# Hands-on Step 3: Build a project to detect faces and send the cropped faces to S3 bucket
 
 #### IAM Roles:
 
@@ -127,7 +127,7 @@ On the AWS DeepLens console, you can track the progress of the deployment. It ca
 You will find your cropped faces uplaod to your S3 bucket.
 
 
-# Hands-on Lab 4: Identify emotions
+# Hands-on Step 4: Identify emotions
 
 **Step 1- Create DynamoDB table**
 
