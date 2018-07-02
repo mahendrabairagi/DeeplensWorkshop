@@ -23,7 +23,7 @@
 # MISC:
 [Link to Deeplens troubleshooting guide](https://s3.amazonaws.com/deeplens-public/DeepLens_Troubleshooting_Guide.pdf)
 
-[Link to Deeplens Forum](https://forums.aws.amazon.com/forum.jspa?forumID=275)
+[Link to Deeplens forum](https://forums.aws.amazon.com/forum.jspa?forumID=275)
 
 [Link to Deeplens community projects](https://aws.amazon.com/deeplens/community-projects/)
 
