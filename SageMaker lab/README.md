@@ -122,6 +122,11 @@ Please proceed to run each code block.
 When you run last cell with "net_sagemaker.fit(inputs)" 
 ***Please make note of log "INFO:sagemaker:Creating training-job with name: sagemaker-mxnet-xxx-xxx-xx"***
 You will need this Sagemaker job name in the model deployment part of lab.
-This blog does actual model training and may take 10-15 mins.
+
+This block does actual model training and may take 10-15 mins.
+Once model training is complete it will show 
+"===== Job Complete =====
+Billable seconds:xxx"
+
 
 You've now completed the Challenge.
