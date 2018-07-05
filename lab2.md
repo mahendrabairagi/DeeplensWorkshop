@@ -12,7 +12,7 @@ In order to follow through with this tutorial, ensure that your DeepLens softwar
 To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/dashboard)
 
 
-![](images/sagemaker-to-deeplens-1.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-1.gif)
 
 
 Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance. ***GIVE Notebook Instance unique name e.g. imageclassiciation-name-date***
