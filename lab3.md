@@ -319,48 +319,11 @@ You should now start to see deployment status. Once the project has been deploye
 **Note**: If your model download progress hangs at a blank state (Not 0%, but **blank**) then you may need to reset greengrass on DeepLens. To do this, log onto the DeepLens device, open up a terminal, and type the following command:
 `sudo systemctl restart greengrassd.service --no-block`. After a couple minutes, you model should start to download.
 
-#### Deploy project:
-
-**Step I- Create Project**
-
-The AWS DeepLens console should open on the Projects screen, select Create new project on the top right (if you don’t see the project list view, click on the hamburger menu on the left and select Projects)
-
-![create project](https://user-images.githubusercontent.com/11222214/38657905-82207e44-3dd7-11e8-83ef-52049e229e33.JPG)
-
-Choose a blank template and scroll down the screen to select Next
-
-Provide a name for your project: face-detection-your-name
-
-Click on Add Models. Selected Import model link in the bottom of the "Add model" page. Select Import source as "Amazon SageMaker trained model", from drop downbox, select the Sagemaker job ID of job you created in Step 2.
-
-Click on Add function and choose the lambda function you just created: Deeplens-sentiment-your-name
-
-Click Create
-
-**Step II- Deploy to device**
-In this step, you will deploy the Face detection project to your AWS DeepLens device.
-
-Select the project you just created from the list by choosing the radio button
-
-
-Select Deploy to device.
-
-
-![choose project-edited-just picture](https://user-images.githubusercontent.com/11222214/38657988-eb9d98b6-3dd7-11e8-8c94-7273fcfa6e1b.jpg)
-
-On the Target device screen, choose your device from the list, and select **Review.**
-
-![target device](https://user-images.githubusercontent.com/11222214/38658011-088f81d2-3dd8-11e8-972a-9342b7b3e291.JPG)
-
-Select Deploy.
-
-![review deploy](https://user-images.githubusercontent.com/11222214/38658032-223db2e8-3dd8-11e8-9bdf-04779cd0e0e6.JPG)
-
-On the AWS DeepLens console, you can track the progress of the deployment. It can take a few minutes to transfer a large model file to the device. Once the project is downloaded, you will see a success message displayed and the banner color will change from blue to green.
 
 **Confirmation/ verification**
 
 You will find your cropped faces uplaod to your S3 bucket.
+
 
 
 # Hands-on Step 4: Identify emotions
