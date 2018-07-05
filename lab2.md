@@ -40,8 +40,6 @@ git clone https://github.com/mahendrabairagi/DeeplensWorkshop.git
 
 Select that folder, then select the folder "SageMakerImageClassification". You should see contents similar to this:
 
-![Alt text](../screenshots/jupyter_dashboard_3.png)
-
 Next, click on "Sagemaker_Imageclassification.ipynb" to open up the notebook. You should now be looking at a Jupyter notebook:
 
 ***Here is walkthrough of the notebook
