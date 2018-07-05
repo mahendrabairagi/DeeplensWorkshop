@@ -118,7 +118,9 @@ The markdown blocks are just there to provide accompanying documentation to the 
 
 The ipython kernel keeps track of the state of the code ran so far, so it's important to run code blocks sequentially from the top-down so it can process in the correct order. When you run a code block, the "In" next to the block indicates the state of the kernel; it will either show a "\*" to indicate that the code block is still processing, or it will show an integer that shows the order in which the blocks were run since the notebook was launched. (These are already there by default).
 
-Please proceed to run each code block.
+****Please make note that in our Deeplens project we won't be using the model created through this notebook, You can proceed to run each block in the code to create the model. With current hyperparameter settings this model can be trained in 10-15 mins however doens not provide high accuracy for face detection. For actual face detection in lambda we will use out of box model available in Deeplens  project templates.
+
+I would like to run train this model, please proceed to run each code block.
 When you run last cell with "net_sagemaker.fit(inputs)" 
 ***Please make note of log "INFO:sagemaker:Creating training-job with name: sagemaker-mxnet-xxx-xxx-xx"***
 You will need this Sagemaker job name in the model deployment part of lab.
