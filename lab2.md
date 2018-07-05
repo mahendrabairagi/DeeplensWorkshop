@@ -2,12 +2,8 @@
 
 Lets build model to classify common objects. This object classification model is based on Caltech-256 dataset and is trained using ResNet network. Through this walk through tutorial, you will build an object classifier that can identify 256 commonly found objects.
 
-***Source code for The SageMaker notebook Sagemaker_Imageclassification.ipynb and related lamda greegrassHelloWorld.py and label file caltech256_labels.txt is attached to this git under SageMakerImageClassification folder*** No need to copy paste the code from readme.
-
-
 To build you own model, you first need to identify a dataset. You can bring your own dataset or use an existing one. In this tutorial, we show you how to build an object detection model in Amazon SageMaker using Caltech-256 image classification dataset.
 
-In order to follow through with this tutorial, ensure that your DeepLens software version is updated to version 1.3+ and above and MXNet version 1.2+
 
 To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/dashboard)
 
@@ -28,7 +24,29 @@ You will see the Jupyter notebook hosted in your instance.
 
 ![](SageMakerImageClassification/images/sagemaker-to-deeplens-4.gif)
 
-Create a new notebook by choosing New and conda_mxnet_p36 kernel.
+***Source code for The SageMaker notebook Sagemaker_Imageclassification.ipynb and related lamda greegrassHelloWorld.py and label file caltech256_labels.txt is attached to this git under SageMakerImageClassification folder*** No need to copy paste the code from readme.
+
+You can also clone git directly on Sagemaker Notebook.
+
+The "New" tab on the top right can be used to create new files, as well as open up a terminal window through the dashboard. We need to clone a github repository, so let's open up a new terminal:
+
+![Alt text](screenshots/jupyter_dashboard_1.png)
+
+Once in the terminal, run the following commands to clone the repo into the dashboard's root directory:
+```shell
+cd SageMaker/
+git clone https://github.com/mahendrabairagi/DeeplensWorkshop.git
+```
+
+Select that folder, then select the folder "SageMakerImageClassification". You should see contents similar to this:
+
+![Alt text](../screenshots/jupyter_dashboard_3.png)
+
+Next, click on "Sagemaker_Imageclassification.ipynb" to open up the notebook. You should now be looking at a Jupyter notebook:
+
+***Here is walkthrough of the notebook
+
+If you would like to create new notebook and not use one from git (Sagemaker_Imageclassification.ipynb) then Create a new notebook by choosing New and conda_mxnet_p36 kernel.
 
 ![](SageMakerImageClassification/images/sagemaker-to-deeplens-5.gif)
 
