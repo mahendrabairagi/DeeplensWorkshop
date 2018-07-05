@@ -60,13 +60,35 @@ A DeepLens **Project** consists of two things:
 
 Before we deploy a project to DeepLens, we need to create a custom lambda function that will use the face-detection model on the device to detect faces and push crops to S3.
 
-You will repeat the steps in Challenge 2 where you created a Lambda function from the "greengrass-hello-world" blueprint. This time, however, you will select "Choose an existing role" and then select "AWSDeepLensLambdaRole". 
+#### Create Inference lambda function:
+
+Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for Lambda
+
+Click 'Create function'
+
+Choose 'Blueprints'
+
+In the search bar, type “greengrass-hello-world” and hit Enter
+
+Choose the python blueprint and click Configure
+
+Name the function: DeepLens-sentiment-your-name
+Role: Choose an existing role
+Existing Role: AWSDeepLensLambdaRole
+
+Click Create Function
+Replace the default script with the [inference script](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Inference%20Lambda/inference-lambda.py)
+
+You can select the inference script, by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
+
+**Note**: In the script, you will have to provide the name for your S3 bucket. Insert your bucket name in the code below
+
+![code bucket](https://user-images.githubusercontent.com/11222214/38719807-b46169fa-3ea8-11e8-8ff2-69af5455ede7.jpg)
+
+Click Save
 
 ![Alt text](/screenshots/deeplens_lambda_0.png)
 
-Next, you will replace the default function with the inference-lambda.py script under Challenge_3, which we've included here for you:
-
-**Note**: Be sure to replace "your-bucket" with the name of the bucket you've been using thus far.
 
 ```python
 #
@@ -246,7 +268,7 @@ Then, enter a brief description and click "Publish."
 
 Before we can run this lambda on the device, we need to attach the right permissions to the right roles. While we assigned a role to this lambda, "AWSDeepLensLambdaRole", it's only a placeholder. Lambda's deployed through greengrass actually inherit their policy through a greengrass group role.
 
-Similar to what we did in challenge 2, we need to add permissions to this role for the lambda function to access S3. To do this, go to the IAM dashboard, find the "AWSDeepLensGreenGrassGroupRole", and attach the policy "AmazonS3FullAccess". If you've forgotten how to do this, please refer to Challenge 2 as an example.
+We need to add permissions to this role for the lambda function to access S3. To do this, go to the IAM dashboard, find the "AWSDeepLensGreenGrassGroupRole", and attach the policy "AmazonS3FullAccess". 
 
 ### Create & Deploy DeepLens Project
 
