@@ -17,20 +17,20 @@ To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https:/
 
 Create notebook instance. Provide the name for your notebook instance and select an instance type (for example ml.t2.medium). Choose to create a new role or use an existing role. Choose Create notebook instance. ***GIVE Notebook Instance unique name e.g. imageclassiciation-name-date***
 
-![](images/sagemaker-to-deeplens-2.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-2.gif)
 
 
 Once your notebook instance is created, open the notebook instance you just created.
 
-![](images/sagemaker-to-deeplens-3.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-3.gif)
 
 You will see the Jupyter notebook hosted in your instance.
 
-![](images/sagemaker-to-deeplens-4.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-4.gif)
 
 Create a new notebook by choosing New and conda_mxnet_p36 kernel.
 
-![](images/sagemaker-to-deeplens-5.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-5.gif)
 
 Let’s start by importing the necessary packages. Importing boto3 SDK for Python allows you to access Amazon services like S3. get_execution_role will allow Amazon SageMaker to assume the role created during instance creation and accesses resources on your behalf.
 
@@ -240,9 +240,9 @@ except:
     
 To check the status, go to SageMaker dashboard and choose Jobs. Select the Job you have defined and scroll down to the details page on Job to “monitor” section. You will see a link to logs which will open CloudWatch.
 
-![](images/sagemaker-to-deeplens-6.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-6.gif)
 
-![](images/sagemaker-to-deeplens-7.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-7.gif)
 
 Once you run the notebook, it will create a model which can be directly imported into AWS DeepLens as a project. Once the training is complete, your model is ready to be imported in to AWS DeepLens.
 
@@ -252,30 +252,30 @@ sudo pip3 install mxnet==1.2.0
 
 Now Log into AWS DeepLens Console (https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects)
 
-![](images/sagemaker-to-deeplens-8.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-8.gif)
 
 
 Create new project
 
-![](images/sagemaker-to-deeplens-9.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-9.gif)
 
 Choose – Create a new blank project
 
-![](images/sagemaker-to-deeplens-10.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-10.gif)
 
 Name project – e.g. imageclassification
-![](images/sagemaker-to-deeplens-11.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-11.gif)
 
 Select Add Model – this will open new page, “Import model to AWS Deeplens”
 
 Select Amazon SageMaker trained model, in the Model setting, Amazon SageMaker training job ID drop down, select the imageclassification model you selected. In Model name choose model name e.g. imageclassification, keep description as image classification.
 
-![](images/sagemaker-to-deeplens-12.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-12.gif)
 
 
 Go back to import model screen, select the imageclassification model you imported earlier, click Add model. Once model is added, you need to add a lambda function by choosing Add function.
 
-![](images/sagemaker-to-deeplens-13.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-13.gif)
 
 To create a AWS DeepLens lambda function, you can follow the blog post: Dive deep into AWS DeepLens Lambda functions and the new model optimizer.
 
@@ -284,19 +284,19 @@ To provide an easy reference, we have provided the instructions for the lambda f
 To create an inference Lambda function, use the AWS Lambda console and follow the steps below:
 
  1. Choose Create function. You customize this function to run inference for your deep learning models.
-![](images/sagemaker-to-deeplens-14.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-14.gif)
 
 2. Choose Blueprints
 
 3. Search for the greengrass-hello-world blueprint.
 
-![](images/sagemaker-to-deeplens-15.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-15.gif)
 
 4. Give your Lambda function the unique name  e.g. imageclassification_yourname_lambda.
 
 5. Choose an existing IAM role: AWSDeepLensLambdaRole. You must have created this role as part of the registration process.
 
-![](images/sagemaker-to-deeplens-16.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-16.gif)
 
 6. Choose Create function.
 
@@ -304,7 +304,7 @@ To create an inference Lambda function, use the AWS Lambda console and follow th
 
 8. In the GreengrassHello file, remove all of the code. You will write the code for inference Lambda function in this file.
 
-![](images/sagemaker-to-deeplens-17.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-17.gif)
 
 Replace existing code with code below
 
@@ -427,7 +427,7 @@ def function_handler(event, context):
  
 9. To add the text file to your lambda function: In the Function code block, choose File. Then choose New File, add following code, then save file as caltech256_labels.txt
 
-![](images/sagemaker-to-deeplens-18.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-18.gif)
 ```
 
 #Insert caltech256_labels.txt
@@ -692,36 +692,36 @@ def function_handler(event, context):
 
 ```
 
-![](images/sagemaker-to-deeplens-19.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-19.gif)
 
 10. Save the lambda function
 
-![](images/sagemaker-to-deeplens-20.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-20.gif)
 
 11. Now deploy the lambda function by selecting Actions dropdown button. And then select Publish new version
 
-![](images/sagemaker-to-deeplens-21.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-21.gif)
 
 
 12. This will pop up new box. You can keep version description blank, and choose Publish. This will publish the lambda function.
 
-![](images/sagemaker-to-deeplens-22.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-22.gif)
 
 13. Once done, add the lambda function to the project and choose Create new project to finish the project creation.
 You will see your project created in the Projects list.
 
-![](images/sagemaker-to-deeplens-23.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-23.gif)
  
 
 14. Once the project is created, select the project and choose Deploy to device. Choose your target AWS DeepLens device. Choose Review.
 
-![](images/sagemaker-to-deeplens-24.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-24.gif)
 
 
 Now you are ready to deploy your own object detection model. Choose Deploy.
 
-![](images/sagemaker-to-deeplens-25.gif)
-![](images/sagemaker-to-deeplens-26.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-25.gif)
+![](SageMakerImageClassification/images/sagemaker-to-deeplens-26.gif)
 
 Congratulations! You have built your own object classification model based on a dataset and deployed it to AWS DeepLens for inference.
 
