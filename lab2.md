@@ -269,10 +269,8 @@ To check the status, go to SageMaker dashboard and choose Jobs. Select the Job y
 ![](SageMakerImageClassification/images/sagemaker-to-deeplens-7.gif)
 
 Once you run the notebook, it will create a model which can be directly imported into AWS DeepLens as a project. Once the training is complete, your model is ready to be imported in to AWS DeepLens.
+***Incase you ran into any issues with model training in Sagemaker, you can use this model stored in s3 s3://deeplens-mahendra/techsummit/model.tar.gz
 
-Ensure that the mxnet version on your AWS DeepLens is 1.2.0 +. In case you need to upgrade, you can type the following code in your Ubuntu terminal.
-
-sudo pip3 install mxnet==1.2.0
 
 Now Log into AWS DeepLens Console (https://console.aws.amazon.com/deeplens/home?region=us-east-1#projects)
 
@@ -296,6 +294,7 @@ Select Amazon SageMaker trained model, in the Model setting, Amazon SageMaker tr
 
 ![](SageMakerImageClassification/images/sagemaker-to-deeplens-12.gif)
 
+If you couldnot train model using Sagemaker then select "Externally trained model" and in S3 bucket enter "deeplens-mahendra/techsummit". In Model name choose model name e.g. imageclassification, keep description as image classification. select "import model" to save the configuration.
 
 Go back to import model screen, select the imageclassification model you imported earlier, click Add model. Once model is added, you need to add a lambda function by choosing Add function.
 
