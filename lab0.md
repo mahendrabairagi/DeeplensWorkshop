@@ -82,7 +82,7 @@ If this is your first time registering the device, you will see the updates avai
 
 ![](/screenshots/installandreboot1.jpg)
 
-****If you are using headerless mode, i.e. with no monitor,keyboard setup then follow instructions on the screen and choose **Install and Reboot**
+****If you are using headless mode, i.e. with no monitor,keyboard setup then follow instructions on the screen and choose **Install and Reboot**
 
 ![install and reboot](https://user-images.githubusercontent.com/11222214/41579269-14d84e30-734b-11e8-8894-c4a76f1715d5.JPG)
 
