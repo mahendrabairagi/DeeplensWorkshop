@@ -78,15 +78,17 @@ Select Save.
 
 If this is your first time registering the device, you will see the updates available screen. Choose **Install and Reboot** It will take couple of minutes for the updates to come through. After the updates are installed, the device will reboot automatically
 
-****If you are using monitor setup and ethenet then igonre wifi setup instructions and choose **Install and Reboot**
+****If you are using monitor setup and ethernet then ***ignore wifi setup instructions*** and choose **Install and Reboot**
 
-!(/screenshot/installandreboot1.jpg)
+![](/screenshots/installandreboot1.jpg)
 
 ![install and reboot](https://user-images.githubusercontent.com/11222214/41579269-14d84e30-734b-11e8-8894-c4a76f1715d5.JPG)
 
 On rebooting, the device will come back to the install and reboot screen. From the URL, delete the #softwareUpdate
 
 ![software update remove](https://user-images.githubusercontent.com/11222214/41579379-a3deed32-734b-11e8-894a-c209cb7a7cca.JPG)
+
+Click on link on step4 in above screenshot, "deeplens.amazon.net" to complete the setup.
 
 ### Step 5- Attach Certificates
 
