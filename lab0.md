@@ -68,13 +68,19 @@ Power ON your device
 
 ### Step 4- Connect to your network
 
-Select your local Wi-Fi network ID from the dropdown list and enter your WiFi password. If you are using ethernet, choose Use Ethernet option instead.
+If you are using Ethernet, choose Ethernet option
+
+If yoy are using Wi-fi then select your local Wi-Fi network ID from the dropdown list and enter your WiFi password. 
 
 Select Save.
 
 ![network connection](https://user-images.githubusercontent.com/11222214/38657139-77c96aa4-3dd3-11e8-8cba-97dc3c47fc66.JPG)
 
 If this is your first time registering the device, you will see the updates available screen. Choose **Install and Reboot** It will take couple of minutes for the updates to come through. After the updates are installed, the device will reboot automatically
+
+****If you are using monitor setup and ethenet then igonre wifi setup instructions and choose **Install and Reboot**
+
+!(/screenshot/installandreboot1.jpg)
 
 ![install and reboot](https://user-images.githubusercontent.com/11222214/41579269-14d84e30-734b-11e8-8894-c4a76f1715d5.JPG)
 
