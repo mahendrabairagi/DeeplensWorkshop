@@ -86,6 +86,8 @@ If this is your first time registering the device, you will see the updates avai
 
 On rebooting, the device will come back to the install and reboot screen. From the URL, delete the #softwareUpdate
 
+****If you are using headerless mode, i.e. with no monitor,keyboard setup then follow instructions on the screen and choose **Install and Reboot**
+
 ![software update remove](https://user-images.githubusercontent.com/11222214/41579379-a3deed32-734b-11e8-894a-c209cb7a7cca.JPG)
 
 Click on link on step4 in above screenshot, "deeplens.amazon.net" to complete the setup.
