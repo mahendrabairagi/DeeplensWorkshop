@@ -86,7 +86,7 @@ If this is your first time registering the device, you will see the updates avai
 
 ![install and reboot](https://user-images.githubusercontent.com/11222214/41579269-14d84e30-734b-11e8-8894-c4a76f1715d5.JPG)
 
-On rebooting, the device will come back to the install and reboot screen. From the URL, delete the #softwareUpdate
+****This process can take 5 minutes to update software, after updating software Deeplens will reboot by itself. After rebooting, the device will come back to the install and reboot screen. From the URL, delete the #softwareUpdate
 
 ![software update remove](https://user-images.githubusercontent.com/11222214/41579379-a3deed32-734b-11e8-894a-c209cb7a7cca.JPG)
 
