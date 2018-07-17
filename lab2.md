@@ -4,13 +4,6 @@ Lets build model to classify common objects. This object classification model is
 
 To build you own model, you first need to identify a dataset. You can bring your own dataset or use an existing one. In this tutorial, we show you how to build an object detection model in Amazon SageMaker using Caltech-256 image classification dataset.
 
-Before we create Sagemaker notebook, lets add S3 permissions to Sagemaker role
-hen you click "Create a new role", a pop-up window will appear that will let you configure S3 access for your SageMaker IAM role. Please select "Any S3 bucket", then "Create role".
-
-![Alt text](/screenshots/create_iam_role_0.png)
-
-You should see a "Success" message once you create the role (it will have a different name than the one shown here).
-
 Now lets build Sagemaker model
 
 To build this model in Amazon SageMaker, Visit Amazon SageMaker console (https://console.aws.amazon.com/sagemaker/home?region=us-east-1#/dashboard)
