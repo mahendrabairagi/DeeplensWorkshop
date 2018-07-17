@@ -70,7 +70,7 @@ Power ON your device
 
 If you are using Ethernet, choose Ethernet option
 
-If yoy are using Wi-fi then select your local Wi-Fi network ID from the dropdown list and enter your WiFi password. 
+If you are using Wi-fi then select your local Wi-Fi network ID from the dropdown list and enter your WiFi password. 
 
 Select Save.
 
