@@ -62,7 +62,7 @@ Step 1- From the left navigation, Choose Devices. Choose your device. Choose Vie
 
 ![view output](https://user-images.githubusercontent.com/11222214/41580046-41fab7d8-734e-11e8-8e1f-74e772f4f520.JPG)
 
-Step 2- Choose Firefox browser for Windows and Mac. Follow the instructions
+Step 2- Choose Firefox browser for Windows and Mac. Follow the instructions. When prompted for password keep it blank.
 
 ![step 1 view output](https://user-images.githubusercontent.com/11222214/41580333-67a45326-734f-11e8-9219-503499a118dc.JPG)
 
