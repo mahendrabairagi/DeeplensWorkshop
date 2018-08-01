@@ -1,4 +1,4 @@
-### Step1: Update os and install awscam
+### Step1: Update OS and install awscam
 
 ```
 sudo apt update
@@ -15,7 +15,7 @@ dpkg -l awscam
 
 ### Step4: Open Firefox browser and type http://deeplens.config (make sure its not www.deeplens.config)
 
-### if site doesnt show up then restart softap/local webserver by following command
+### if site doesn't show up then restart softap/local webserver by following command
 
 ```
 sudo systemctl restart softap.service
