@@ -4,9 +4,13 @@ Use case for this workshop is detect person through the Deeplens and once person
 ## In this workshop you will learn the following:
 
 1: Create unique ids for each face image using AWS Rekogtion
+
 2. Create profile for each face ids using AWS DynamoDB
+
 3. Detect faces through AWS Deeplens, save cropped faces to AWS s3. 
+
 4. Identify faces stored in S3 and retrieve profile through AWS Lambda on Cloud and DynamoDB 
+
 5. Publish profiles to AWS IoT and AWS SNS
 
 
@@ -35,7 +39,9 @@ Or using cloud9 online development environment https://docs.aws.amazon.com/cloud
 II. Open terminal
 
 1. Let’s create unique S3 bucket first
+
 On terminal, execute following command, replace S3 bucket <s3bucket> with bucket name you want. I am using bucket name "Deeplens-rekognition-xxxxxx"
+
 **** Make sure you are in US-EAST-1 region
 
 ```
@@ -397,7 +403,10 @@ Finally, click "Deploy" on the next screen to begin project deployment.
 You should now start to see deployment status. Once the project has been deployed, your deeplens will now start processing frames and running face-detection locally. When faces are detected, it will push to your S3 bucket. Everything else in the pipeline remains the same, so return to your dashboard to see the new results coming in!
 
 **Note**: If your model download progress hangs at a blank state (Not 0%, but **blank**) then you may need to reset greengrass on DeepLens. To do this, log onto the DeepLens device, open up a terminal, and type the following command:
-`sudo systemctl restart greengrassd.service --no-block`. After a couple minutes, you model should start to download.
+
+`sudo systemctl restart greengrassd.service --no-block`. 
+
+After a couple minutes, you model should start to download.
 
 
 **Confirmation/ verification**
@@ -422,9 +431,13 @@ Select “Lambda” and choose "Next:Permissions"
 Attach the following policies: 
 
 * AmazonDynamoDBFullAcces
+
 * AmazonS3FullAccess
+
 * AmazonRekognitionFullAccess
+
 * CloudWatchFullAccess
+
 * AWSIoTFullAccess
 
 Click Next
@@ -445,17 +458,22 @@ Click 'Create function'
 Choose 'Author from scratch'
 
 Name the function: rekognize-person
+
 Runtime: Choose Python 2.7
+
 Role: Choose an existing role
+
 Existing role: rekognizePerson
 
 Choose Create function
 
 Replace the default script with the script in [rekognize-person.py](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Integrate%20with%20Rekognition/rekognize-person.py). You can select the script by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
 
-Make sure you enter the "CollectionId=" (line 40) as one you created e.g. "rekognition-collection"
-Make sure you enter the "table =" (line 14) as one you created e.g. table = dynamodb.Table('rekognition-collection')
-Check the IoT topic name (line 52), in this example it is "rekognition" e.g. iotdata.publish(topic='rekognition',qos=0, payload=json.dumps(profile))
+***Make sure you enter the "CollectionId=" (line 40) as one you created e.g. "rekognition-collection"
+
+***Make sure you enter the "table =" (line 14) as one you created e.g. table = dynamodb.Table('rekognition-collection')
+
+***Check the IoT topic name (line 52), in this example it is "rekognition" e.g. iotdata.publish(topic='rekognition',qos=0, payload=json.dumps(profile))
 
 
 Next, we need to add the event that triggers this lambda function. This will be an “S3:ObjectCreated” event that happens every time a face is uploaded to the face S3 bucket. Add S3 trigger from designer section on the left. 
@@ -463,9 +481,13 @@ Next, we need to add the event that triggers this lambda function. This will be 
 Configure with the following:
 
 Bucket name: face-detection-your-name (you created this bucket earlier)
+
 Event type- Object Created
+
 Prefix- faces/
+
 Filter- .jpg
+
 Enable trigger- ON (keep the checkbox on)
 
 Save the lambda function
@@ -494,8 +516,12 @@ replace topic name to topic name used in the lambda e.g. analyst_rekognition
 ### With this we have come to the end of the session. As part of building this project, you learnt the following:
 
 1.	Use AWS Rekogntion and DynamoDB to create unique profile for each person based on face id
+
 2.	Modify the DeepLens inference lambda function to upload cropped faces to S3
+
 3.	Deploy the inference lambda function and face detection model to DeepLens
+
 4.	Create a lambda function to trigger Rekognition to identify face
+
 5.	Analyze using AWS IoT and AWS SNS
 
