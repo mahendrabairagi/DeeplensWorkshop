@@ -439,7 +439,7 @@ Attach the following policies:
 
 * AWSIoTFullAccess
 
-![Alt text](/screenshots/roles0.png)
+![Alt text](/screenshots/roles1.png)
 
 Click Next
 
