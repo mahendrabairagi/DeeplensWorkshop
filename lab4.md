@@ -3,7 +3,7 @@ Use case for this workshop is detect person through the Deeplens and once person
 
 ## In this workshop you will learn the following:
 
-1: Create unique ids for each face image using AWS Rekogtion
+1. Create unique ids for each face image using AWS Rekogtion
 
 2. Create profile for each face ids using AWS DynamoDB
 
