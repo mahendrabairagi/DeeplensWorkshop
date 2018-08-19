@@ -508,19 +508,19 @@ Go to [AWS Management console](https://console.aws.amazon.com/console/home?regio
 
 Select "Test" from left side menu
 
-![Alt text](/screenshots/iot_Test0.png)
+![Alt text](/screenshots/IoT_Test0.png)
 
 
 Then select "Subscribe to a topic"
 
-![Alt text](/screenshots/iot_Test1.png)
+![Alt text](/screenshots/IoT_Test1.png)
 
 
 In Topic give name as one in lambda e.g. rekognition
 
 You will start seeing messages 
 
-![Alt text](/screenshots/iot_Test1.png)
+![Alt text](/screenshots/IoT_Test2.png)
 
 To add setup SNS messages create IoT rule to send SNS per link
 https://docs.aws.amazon.com/iot/latest/developerguide/iot-sns-rule.html
