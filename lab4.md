@@ -416,7 +416,6 @@ You will find your cropped faces uplaod to your S3 bucket.
 
 
 ### Step 4: Identify faces stored in S3 and retrieve profile through AWS Lambda on Cloud and DynamoDB 
-5. Publish profiles to AWS IoT and AWS SNS
 
 **I- Create a role for cloud lambda function**
 
