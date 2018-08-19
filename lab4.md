@@ -14,9 +14,11 @@ Use case for this workshop is detect person through the Deeplens and once person
 
 I. Register and configure your DeepLens device (You can skip this lab if device registration is already complete)
 Follow instructions here: 
+
 [Lab 0 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab0.md)
 
 II: Deploy out of box face detection model
+
 [Lab 1 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab1.md)
 
 
