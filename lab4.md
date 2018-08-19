@@ -439,6 +439,8 @@ Attach the following policies:
 
 * AWSIoTFullAccess
 
+![Alt text](/screenshots/roles0.png)
+
 Click Next
 
 Provide a name for the role: rekognizePerson
@@ -466,6 +468,8 @@ Existing role: rekognizePerson
 
 Choose Create function
 
+![Alt text](/screenshots/lambda_create_function0.png)
+
 Replace the default script with the script in [rekognize-person.py](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Integrate%20with%20Rekognition/rekognize-person.py). You can select the script by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
 
 ***Make sure you enter the "CollectionId=" (line 40) as one you created e.g. "rekognition-collection"
@@ -489,6 +493,10 @@ Filter- .jpg
 
 Enable trigger- ON (keep the checkbox on)
 
+![Alt text](/screenshots/s3_trigger0.png)
+
+![Alt text](/screenshots/s3_trigger1.png)
+
 Save the lambda function
 
 Under 'Actions' tab choose **Publish**
@@ -500,11 +508,19 @@ Go to [AWS Management console](https://console.aws.amazon.com/console/home?regio
 
 Select "Test" from left side menu
 
+![Alt text](/screenshots/iot_Test0.png)
+
+
 Then select "Subscribe to a topic"
+
+![Alt text](/screenshots/iot_Test1.png)
+
 
 In Topic give name as one in lambda e.g. rekognition
 
 You will start seeing messages 
+
+![Alt text](/screenshots/iot_Test1.png)
 
 To add setup SNS messages create IoT rule to send SNS per link
 https://docs.aws.amazon.com/iot/latest/developerguide/iot-sns-rule.html
