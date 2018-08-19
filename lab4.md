@@ -38,7 +38,7 @@ Or using cloud9 online development environment https://docs.aws.amazon.com/cloud
 
 II. Open terminal
 
-1. Let’s create unique S3 bucket first
+Let’s create unique S3 bucket first
 
 On terminal, execute following command, replace S3 bucket <s3bucket> with bucket name you want. I am using bucket name "Deeplens-rekognition-xxxxxx"
 
