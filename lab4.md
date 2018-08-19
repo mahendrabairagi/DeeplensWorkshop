@@ -21,7 +21,7 @@ Follow instructions here:
 
 [Lab 0 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab0.md)
 
-II: Deploy out of box face detection model
+II. Deploy out of box face detection model
 
 [Lab 1 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab1.md)
 
@@ -31,7 +31,7 @@ We will use AWS CLI (command line interface) to create Face ID, Dynamodb table
 
 We will first setup AWS cli ( you can skip this step if AWS CLI is already setup)
 
-I.Setup AWS CLI
+I. Setup AWS CLI
 On your machine  https://docs.aws.amazon.com/lambda/latest/dg/setup-awscli.html
 
 Or using cloud9 online development environment https://docs.aws.amazon.com/cloud9/latest/user-guide/setup-express.html
