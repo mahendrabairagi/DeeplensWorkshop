@@ -522,7 +522,7 @@ You will start seeing messages
 
 ![Alt text](/screenshots/IoT_Test2.png)
 
-To add setup SNS messages create IoT rule to send SNS per link
+To setup SNS messages create IoT rule to send SNS per link
 https://docs.aws.amazon.com/iot/latest/developerguide/iot-sns-rule.html
 
 replace topic name to topic name used in the lambda e.g. analyst_rekognition
