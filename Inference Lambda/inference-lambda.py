@@ -137,6 +137,18 @@ def greengrass_infinite_infer_run():
                 xmax = int( xscale * obj['xmax'] ) + int((obj['xmax'] - input_width/2) + input_width/2)
                 ymax = int( yscale * obj['ymax'] )
 
+		        if ymin >25:
+                   ymin = ymin - 25
+           
+                if ymax <275:
+                   ymax = ymax + 25
+           
+                if xmin > 25:
+	               xmin = xmin - 25
+                
+                if xmax <275:
+                   xmax = xmax + 25
+                
                 crop_img = frame[ymin:ymax, xmin:xmax]
 
                 push_to_s3(crop_img, i)
