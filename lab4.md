@@ -29,6 +29,7 @@ We will first setup AWS cli ( you can skip this step if AWS CLI is already setup
 
 I.Setup AWS CLI
 On your machine  https://docs.aws.amazon.com/lambda/latest/dg/setup-awscli.html
+
 Or using cloud9 online development environment https://docs.aws.amazon.com/cloud9/latest/user-guide/setup-express.html
 
 II. Open terminal
