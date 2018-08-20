@@ -64,8 +64,6 @@ Crete Rekognition collection
 ```
 aws rekognition create-collection --collection-id rekognition-collection
 ```
-Please make note of the CollectionArn from command above
-
 
 Output of above command should look like this:
 ```
