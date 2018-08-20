@@ -76,6 +76,16 @@ Output of above command should look like this:
 }
 ```
 
+Run following to add face to the Rekogtion Collectionn
+
+```
+aws rekognition index-faces \
+       --image '{"S3Object":{"Bucket":"deeplens-rekognition-08082018","Name":"mypicture.jpg"}}' \
+       --collection-id "analyst-rekognition-collection" \
+       --detection-attributes "ALL" \
+       --external-image-id "mypicture.jpg" 
+```
+
 Please make not of the face id
 
 "FaceId": "xxxxxxxxxxxxxxxxxxxxxxxxx",
