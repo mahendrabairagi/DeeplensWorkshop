@@ -122,17 +122,6 @@ Click on the role, and click Attach Policy
 
 Search for AmazonS3FullAccess and choose the policy by checking the box and click on Attach Policy
 
-#### Create Bucket:
-
-We need to create an S3 bucket that we can upload faces to.
-
-Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for S3
-
-Choose 'Create bucket'
-
-Name your bucket : face-detection-your-name
-
-Click on Create 
 
 #### Create Inference lambda function:
 
@@ -163,7 +152,7 @@ Replace the default script with the [inference script](https://github.com/mahend
 
 You can select the inference script, by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
 
-**Note**: In the script, you will have to provide the name for your S3 bucket. Insert your bucket name in the code below
+**Note**: In the script, you will have to provide the name for your S3 bucket. We will use bucket nanme created in Step 1, II. e.g. deeplens-rekognition-xxxx. Insert your bucket name in the code below
 
 ![code bucket](https://user-images.githubusercontent.com/11222214/38719807-b46169fa-3ea8-11e8-8ff2-69af5455ede7.jpg)
 
