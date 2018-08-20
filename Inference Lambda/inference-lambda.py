@@ -137,7 +137,7 @@ def greengrass_infinite_infer_run():
                 xmax = int( xscale * obj['xmax'] ) + int((obj['xmax'] - input_width/2) + input_width/2)
                 ymax = int( yscale * obj['ymax'] )
 
-		        if ymin >25:
+		if ymin >25:
                    ymin = ymin - 25
            
                 if ymax <275:
