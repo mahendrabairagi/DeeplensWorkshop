@@ -143,7 +143,7 @@ In the search bar, type “greengrass-hello-world” and hit Enter
 
 Choose the python blueprint and click Configure
 
-Name the function: DeepLens-sentiment-your-name
+Name the function: deeplens-facedetection-your-name
 Role: Choose an existing role
 Existing Role: AWSDeepLensLambdaRole
 
