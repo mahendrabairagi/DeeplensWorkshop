@@ -28,7 +28,7 @@ In this lab, you will build and train a face detection model. Follow instruction
 
 # Hands-on Step 3: Build a project to detect faces and send the cropped faces to S3 bucket
 
-#### IAM Roles:
+#### IAM Roles: (Optional step - if IAM role exists then skip this step)
 
 First, we need to add S3 permissions to the DeepLens Lambda role so the lambda on the device can call Put Object into the bucket of interest.
 
@@ -339,7 +339,7 @@ Primary key: s3key
 
 Click on Create. This will create a table in your DynamoDB.
 
-**Step II- Create a role for cloud lambda function**
+**Step II- Create a role for cloud lambda function** (Optional step - skip this step if Role already exists)
 
 Go to [AWS Management console](https://console.aws.amazon.com/console/home?region=us-east-1) and search for IAM
 
