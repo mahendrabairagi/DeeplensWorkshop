@@ -10,7 +10,7 @@
 
 ![image](/screenshots/Slide07.jpeg)
 
-# [Lab 2 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab2.md)
+# [Lab 2 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Create_custom_Sagemaker_model_and_deploy_on_Deeplens.md)
 
 ![image](/screenshots/Slide08.jpeg)
 
