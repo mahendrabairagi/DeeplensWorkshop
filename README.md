@@ -4,7 +4,7 @@
 ![image](/screenshots/Slide04.jpeg)
 ![image](/screenshots/Slide05.jpeg)
 
-# [Lab 1 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab1.md)
+# [Lab 1 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Deploying_Face_Detection.md)
 
 ![image](/screenshots/Slide06.jpeg)
 
@@ -14,7 +14,7 @@
 
 ![image](/screenshots/Slide08.jpeg)
 
-# [Lab 3 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/lab3.md)
+# [Lab 3 Link](https://github.com/mahendrabairagi/DeeplensWorkshop/blob/master/Sentiment_Analysis.md)
 
 ![image](/screenshots/Slide09.jpeg)
 
