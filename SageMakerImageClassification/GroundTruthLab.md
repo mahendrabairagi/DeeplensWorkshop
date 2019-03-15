@@ -1,4 +1,4 @@
-## Prereq:
+## Prereq for workshop conductors.
 ### GroundTruth lab
 Before start, get emails id of attendees
 
