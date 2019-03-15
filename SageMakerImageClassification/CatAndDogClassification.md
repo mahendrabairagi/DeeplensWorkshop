@@ -1,5 +1,9 @@
 # In this lab we will create a Cat and Dog Image Classification model and deploy that model on Deeplens
 
+To create model please follow notebook 
+
+![]cat-dog-classification-groundtruth.ipynb
+
 We will walk you through deploying a model to classify cat and dog classification model.
 
 Ensure that the mxnet version on your AWS DeepLens is 1.2.0 +. In case you need to upgrade, you can type the following code in your Ubuntu terminal.
