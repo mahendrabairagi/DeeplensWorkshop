@@ -1,4 +1,5 @@
-## Prereq for workshop conductors.
+## Prereq for workshop conductors
+
 ### GroundTruth lab
 Before start, get emails id of attendees
 
@@ -9,7 +10,16 @@ Create S3 bucket for dataset
 Copy Cat and Dog dataset
 
 ### Create GroundTruth Job:
-Open Sagemaker, go to GroundTruth
+* Open Amazon Sagemaker Console and Select "Ground Truth" --> "Labeling Jobs".
+* Click "Create labeling job"
+    * Specify job details
+        * Job name : groundtruth-labeling-job-cat-dog  (Note : has to be a unique )
+        * Input dataset location : Create manifest
+            * Entire S3 path where images are located. (Note : should end with /)
+            * Select 'Images' as data type
+            * Once manifest creation is complete, click "Use this manifest"
+            * Click Create
+
 
 Create new labeling job
 
