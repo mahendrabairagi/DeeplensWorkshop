@@ -2,7 +2,7 @@
 
 To create model please follow notebook 
 
-![cat-dog-classification-groundtruth notebook](cat-dog-classification-groundtruth.ipynb)
+[cat-dog-classification-groundtruth notebook](cat-dog-classification-groundtruth.ipynb)
 
 We will walk you through deploying a model to classify cat and dog classification model.
 
