@@ -85,11 +85,12 @@ Create job
 
 * You should receive an email with subject "You're invited by AWS to work on a labeling project."
 * Navigate to webpage in the email and change your password.
-* Once you receive labeling job, the protal view is similar to below.
+* Once you receive labeling job, the portal view is similar to below.
 
 ![](images/GroundTruthLabelingPortal.gif)
 
-* Click 'Start Working'. View changes to
+* Click 'Start Working'.
+* Your view now should be similar to below. Note that the actual image might be different.
 
 ![](images/GroundTruth-LabelingJob.gif)
 
